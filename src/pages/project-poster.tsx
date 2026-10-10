@@ -121,6 +121,7 @@ export default function ProjectPosterPage({ slug }: Props) {
                 paperHref={project.paperHref}
                 posterHref={project.posterHref}
                 repoHref={project.repoHref}
+                dashboardHref={project.dashboardHref}
                 className="mt-8 justify-center"
                 buttonSize="default"
               />
@@ -192,6 +193,16 @@ export default function ProjectPosterPage({ slug }: Props) {
               <p className="font-mono text-xs text-muted-foreground">
                 {site.posterCredit}
               </p>
+              {project.dashboardHref ? (
+                <p className="mt-3">
+                  <a
+                    href={resolveProjectAssetHref(project.dashboardHref)}
+                    className="font-mono text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                  >
+                    Open the console →
+                  </a>
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

@@ -191,6 +191,7 @@ function App() {
                       paperHref={project.paperHref}
                       posterHref={project.posterHref}
                       repoHref={project.repoHref}
+                      dashboardHref={project.dashboardHref}
                     />
                     <p>
                       <a

@@ -18,11 +18,11 @@ export function ExperienceImageCard({ caption, src, className }: Props) {
       )}
     >
       <CardContent className="p-0">
-        <div className="flex min-h-[11rem] items-center justify-center border-b border-border bg-[#F4F1EA] p-2 sm:min-h-[13rem]">
+        <div className="flex aspect-[5/4] items-center justify-center border-b border-border bg-[#F4F1EA] p-3">
           <img
             src={src}
             alt={caption}
-            className="max-h-[16rem] w-full object-contain"
+            className="max-h-full max-w-full object-contain"
             loading="lazy"
             decoding="async"
           />

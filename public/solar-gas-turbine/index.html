@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fuel setting console</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <p class="kicker">Control room · hypothesis, not an interview</p>
+    <h1>Hold the turbine at 1473 K. Send a fuel setting only when the tests allow it.</h1>
+    <p class="lede">
+      This screen is for a control-room operator. That person has not been interviewed.
+      The job assumed here is the one they do today: change the fuel flow when inlet air,
+      solar heat, or the propane fraction moves, so the turbine inlet stays at 1473 K.
+      The numbers come from the model in the course report. Moving a slider does not retrain it.
+    </p>
+    <button type="button" class="primary" id="reset">Reset</button>
+
+    <section class="layout">
+      <div class="card">
+        <p class="section-label">Reference setting</p>
+        <p class="ref-line">303 K · propane 0.25 · 1,500 kW</p>
+
+        <div class="presets">
+          <button type="button" data-preset="corner">Hot corner</button>
+          <button type="button" data-preset="outside">Outside the tests</button>
+        </div>
+
+        <label for="t1">Inlet air temperature <span id="t1-out">303 K</span></label>
+        <input id="t1" type="range" min="250" max="340" step="1" value="303">
+        <label for="gamma">Propane fraction <span id="gamma-out">0.25</span></label>
+        <input id="gamma" type="range" min="0" max="0.75" step="0.01" value="0.25">
+        <label for="qsol">Solar heat <span id="q-out">1,500 kW</span></label>
+        <input id="qsol" type="range" min="200" max="3200" step="20" value="1500">
+
+        <div class="outputs">
+          <div>
+            <p>Air–fuel ratio</p>
+            <strong id="alpha">—</strong>
+            <small id="alpha-delta">—</small>
+          </div>
+          <div>
+            <p>Efficiency</p>
+            <strong><span id="eta">—</span><small> %</small></strong>
+            <small id="eta-delta">—</small>
+          </div>
+        </div>
+        <p class="fuel-line" id="fuel-line"></p>
+        <p class="note">A higher air–fuel ratio means less fuel injected for the same air. Typical efficiency error on the tests is 0.002, about 0.2 percentage points. That is an order of magnitude, not a guarantee at every point.</p>
+        <button type="button" class="primary" id="send">Send setting</button>
+        <p class="note" id="send-reason"></p>
+      </div>
+
+      <aside class="card">
+        <p id="status" class="status inside">Inside the tests</p>
+        <h2 id="decision">This setting can be sent.</h2>
+        <p id="detail"></p>
+        <p class="note" id="overlap">Several of the twenty “tests” are the same conditions as the training set, only rounded. The 116-versus-131 case is a hard point the network already saw and learned poorly. This is not evidence about another turbine.</p>
+        <h3 class="section-label">Log</h3>
+        <ol id="journal"></ol>
+        <p class="note">One random start never trained. Its error stays near 0.16. Those weights are not on this screen.</p>
+      </aside>
+    </section>
+
+    <section class="figures">
+      <figure>
+        <canvas class="plot tall" id="surface"></canvas>
+        <figcaption id="surface-caption"></figcaption>
+      </figure>
+      <figure>
+        <canvas class="plot tall" id="scatter"></canvas>
+        <figcaption>Measured air–fuel ratio against this model’s prediction. The marked point is 318 K, propane 0.5, 2500 kW: 131 measured, about 116 predicted.</figcaption>
+      </figure>
+    </section>
+
+    <details class="fold">
+      <summary>How the small network was checked</summary>
+      <p class="lede">Eight unnamed measurements, trained two ways, plus the same starts raised by 20%. The learning-rate slider recomputes only this eight-row fit. It does not touch the turbine model.</p>
+      <section class="layout">
+        <div class="card">
+          <div class="presets" id="p1-modes"></div>
+          <label for="newton-gamma">Newton learning rate <span id="newton-out">0.015</span></label>
+          <input id="newton-gamma" type="range" min="0.002" max="0.03" step="0.001" value="0.015">
+          <p class="note" id="newton-note">Saved result. Move the learning rate to recompute this fit.</p>
+          <table>
+            <thead><tr><th>Weight</th><th id="weight-head">Value</th></tr></thead>
+            <tbody id="weights"></tbody>
+          </table>
+          <p class="note" id="p1-error"></p>
+        </div>
+        <div class="card">
+          <canvas class="plot" id="p1-plot"></canvas>
+          <p>Predicted output against the eight measurements.</p>
+          <img id="loss-img" src="p2_loss_history.png" alt="Training loss of the report model, falling below 0.04">
+          <p id="loss-caption">Training trace for the turbine model in the report. The learning rate steps from 0.005 to 0.0001. The normalized error ends at 0.017. This curve is not an operating result.</p>
+        </div>
+      </section>
+    </details>
+
+    <footer>
+      <p>Course write-up, with the network code: <a href="/papers/solar-gas-turbine.pdf">Project 1 report (PDF)</a>.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
