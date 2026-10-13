@@ -21,8 +21,9 @@ export function ExperienceImageCard({ caption, src, className }: Props) {
         <div className="flex aspect-[5/4] items-center justify-center border-b border-border bg-[#F4F1EA] p-3">
           <img
             src={src}
+            srcSet={`${src} 2x`}
             alt={caption}
-            className="max-h-full max-w-full object-contain"
+            className="h-auto max-h-full w-auto max-w-full object-contain"
             loading="lazy"
             decoding="async"
           />

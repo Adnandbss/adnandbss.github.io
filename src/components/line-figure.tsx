@@ -38,6 +38,8 @@ type Props = {
   gap?: FigureGap
   /** Honesty line under the figure. */
   note?: string
+  /** Tick and hover labels, index-aligned with `xs`. */
+  xLabels?: string[]
 }
 
 const W = 560
@@ -72,6 +74,7 @@ export function LineFigure({
   shadeFrom,
   gap,
   note,
+  xLabels,
 }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null)
   const [hover, setHover] = useState<number | null>(null)
@@ -125,6 +128,12 @@ export function LineFigure({
 
   const hoverX = hover === null ? 0 : sx(xs[hover])
   const hoverPct = (hoverX / W) * 100
+
+  function tickLabel(t: number): string {
+    if (!xLabels) return fmt(t)
+    const i = xs.findIndex((x) => x === t)
+    return i >= 0 ? xLabels[i] : fmt(t)
+  }
 
   return (
     <figure className="mb-10">
@@ -208,23 +217,25 @@ export function LineFigure({
                 className="fill-muted-foreground font-mono"
                 fontSize="10"
               >
-                {fmt(t)}
+                {tickLabel(t)}
               </text>
             ))}
 
             <text x={PAD_L} y={12} className="fill-muted-foreground font-mono" fontSize="10" letterSpacing="0.08em">
               {yUnit}
             </text>
-            <text
-              x={PAD_L + PLOT_W / 2}
-              y={H - 8}
-              textAnchor="middle"
-              className="fill-muted-foreground font-mono"
-              fontSize="10"
-              letterSpacing="0.08em"
-            >
-              {xUnit}
-            </text>
+            {xLabels ? null : (
+              <text
+                x={PAD_L + PLOT_W / 2}
+                y={H - 8}
+                textAnchor="middle"
+                className="fill-muted-foreground font-mono"
+                fontSize="10"
+                letterSpacing="0.08em"
+              >
+                {xUnit}
+              </text>
+            )}
 
             {bandPath ? <path d={bandPath} className="fill-foreground/15" /> : null}
 
@@ -331,11 +342,11 @@ export function LineFigure({
 
           {hover !== null ? (
             <div
-              className="pointer-events-none absolute top-1 z-10 -translate-x-1/2 border border-border bg-background px-2 py-1.5 shadow-sm"
-              style={{ left: `${Math.min(88, Math.max(12, hoverPct))}%` }}
+              className={`pointer-events-none absolute top-1 z-10 border border-border bg-background px-2 py-1.5 shadow-sm ${hoverPct > 68 ? "-translate-x-full" : "-translate-x-1/2"}`}
+              style={{ left: `${Math.min(92, Math.max(8, hoverPct))}%` }}
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">
-                {fmt(xs[hover])} {xUnit}
+                {xLabels ? xLabels[hover] : `${fmt(xs[hover])} ${xUnit}`}
               </p>
               {series.map((s) => (
                 <p key={`t-${s.id}`} className="mt-0.5 whitespace-nowrap font-mono text-[11px] text-foreground">
@@ -351,6 +362,8 @@ export function LineFigure({
           ) : null}
         </div>
       </div>
+
+      <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Hover the curve</p>
 
       <details className="mt-2">
         <summary className="cursor-pointer font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground">
@@ -371,7 +384,7 @@ export function LineFigure({
             <tbody>
               {xs.map((x, i) => (
                 <tr key={x} className="border-b border-border/60 last:border-0">
-                  <td className="px-2 py-1 text-muted-foreground">{fmt(x)}</td>
+                  <td className="px-2 py-1 text-muted-foreground">{xLabels ? xLabels[i] : fmt(x)}</td>
                   {series.map((s) => (
                     <td key={`td-${s.id}-${x}`} className="px-2 py-1 text-foreground">
                       {fmt(s.values[i])}
