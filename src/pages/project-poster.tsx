@@ -182,7 +182,7 @@ export default function ProjectPosterPage({ slug }: Props) {
                 <h2 className="mb-4 text-center font-mono text-[10px] font-bold uppercase tracking-[0.35em] text-foreground/45">
                   Figures
                 </h2>
-                <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
                   {galleryItemsOnDisk.map((item) => (
                     <ExperienceImageCard
                       key={item.id}
