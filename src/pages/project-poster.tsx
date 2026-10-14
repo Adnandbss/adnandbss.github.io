@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Nav } from "@/components/nav"
 import { ExperienceImageCard } from "@/components/experience-image-card"
 import { ProjectDownloadLinks } from "@/components/project-download-links"
+import { AwardBadge } from "@/components/award-badge"
 import { getProjectBySlug, projectDetails, resolveProjectAssetHref } from "@/data/project-detail"
 import { site } from "@/data/site"
 import { isGalleryImageFileAvailable } from "@/lib/gallery-image-available"
@@ -110,6 +111,11 @@ export default function ProjectPosterPage({ slug }: Props) {
               <p className="mx-auto mt-4 max-w-3xl text-pretty text-sm text-muted-foreground md:text-base">
                 {project.subtitle}
               </p>
+              {project.award ? (
+                <div className="mt-5 flex justify-center">
+                  <AwardBadge award={project.award} className="text-sm" />
+                </div>
+              ) : null}
               <div className="mt-6 flex flex-wrap justify-center gap-2">
                 {project.tags.map((tag) => (
                   <Badge key={tag} variant="outline" className="rounded-none text-xs">

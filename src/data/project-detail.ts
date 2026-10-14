@@ -17,6 +17,8 @@ export type ProjectDetail = {
   subtitle: string
   year: string
   venue: string
+  /** Prize or ranking, shown as a badge on the card and the poster. Omit when there is none. */
+  award?: string
   tags: string[]
   /** Site-relative path (e.g. papers/foo.pdf) or https URL — files live under `public/` when relative */
   paperHref?: string
@@ -41,6 +43,29 @@ export function resolveProjectAssetHref(href: string): string {
 
 /** One object per project. Keep `project-poster-build.ts` in the same order. */
 export const projectDetails: ProjectDetail[] = [
+  {
+    slug: "geste",
+    title: "Geste",
+    subtitle:
+      "A craftsperson's phone video becomes a dataset a robotics lab can buy.",
+    year: "2026",
+    venue: "B@BHacks 2.0 · Blockchain at Berkeley, Berkeley Haas · 11 October 2026",
+    award: "Winner · 1st place, Most Creative track · B@BHacks 2.0",
+    tags: ["TypeScript", "React", "Gemini", "ElevenLabs", "x402", "AUSD", "Base"],
+    abstract:
+      "Built in about six hours at B@BHacks 2.0 by a team of four: Romain Seiller, Willem Larras, Adnan Ahali, Julius Graf. A pastry chef or a butcher films their workbench and explains out loud what they are doing. Geste turns that video into gesture clips with provenance and consent attached, prices them live per trade, and lets a lab's AI agent buy them. I worked on the pitch and the product, the video pipeline, and the live pricing, and with Romain on deployment, the frontend, the demo video, and the submission.",
+    problem:
+      "A robotics lab wants recordings of skilled hands at work, cut gesture by gesture and labelled. The people who have those skills have a phone, not a data pipeline. And a clip bought off the internet says nothing about who recorded it or whether they agreed to sell it.",
+    approach:
+      "The pipeline segments the video into timestamped gestures, aligns each one with the transcript, and cuts one clip per gesture. Every clip is hashed into a manifest that the craftsperson signs with EIP-712, so provenance and consent are verifiable. Each trade has a live price driven by supply, demand, and a web signal. The lab's AI agent pays in AUSD over HTTP 402 — gasless, x402 on Base — under a budget it cannot exceed.",
+    outcome:
+      "Winner, 1st place, Most Creative track at B@BHacks 2.0 (Blockchain at Berkeley, Berkeley Haas, 11 October 2026). My first hackathon. 70% of every sale goes to the craftsperson. The code and the demo stay private while we keep building.",
+    gallery: [
+      { id: "ge0", caption: "The live app — artisan films on a phone, the lab buys on a crypto market", imageHref: "images/projects/geste/app.png" },
+      { id: "ge1", caption: "From the workbench to the lab — film, segment, align, clip, sign", imageHref: "images/projects/geste/1.svg" },
+      { id: "ge2", caption: "Lab side — live price per trade, HTTP 402, AUSD over x402 on Base", imageHref: "images/projects/geste/2.svg" },
+    ],
+  },
   {
     slug: "heat-pump-fdd",
     title: "Heat Pump FDD",
