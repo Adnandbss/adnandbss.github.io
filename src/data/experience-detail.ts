@@ -27,6 +27,8 @@ export type ExperienceDetail = {
   owned: string[]
   description: string
   tags: string[]
+  /** Image on the home card, under `public/`. Defaults to the first gallery image. */
+  cover?: string
   gallery: ExperienceGalleryItem[]
 }
 
@@ -118,6 +120,7 @@ export const experienceDetails: ExperienceDetail[] = [
       "After that it stopped being a one-off. Every later mission on ISO 50001 used the same dashboard: site level, then the equipment underneath (boilers, HVAC), then the drivers of the load, then a forecast against the reference. The client was buying the tool along with the mission.\n\n" +
       "The roadmaps sat on top of that trace. For pharmaceutical and automotive sites I projected a 45% reduction in greenhouse-gas emissions. The tracking, run to ISO 50001, is what made the number operational: the anomalies it surfaced led to a 22% drop in energy consumption.",
     tags: ["Power BI", "VBA", "ISO 50001", "Forecasting", "Energy"],
+    cover: "images/experience/greenflex/1.png",
     gallery: [],
   },
 ]

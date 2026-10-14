@@ -4,13 +4,14 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Nav } from "@/components/nav"
 import { experienceDetails } from "@/data/experience-detail"
-import { projectDetails } from "@/data/project-detail"
+import { projectDetails, resolveProjectAssetHref } from "@/data/project-detail"
 import { site } from "@/data/site"
 import { ContactLinks } from "@/components/contact-links"
 import { ProjectDownloadLinks } from "@/components/project-download-links"
 import DecryptedText from "@/components/decrypted-text"
 import { ResumeChip } from "@/components/resume-chip"
 import { AwardBadge } from "@/components/award-badge"
+import { isGalleryImageFileAvailable } from "@/lib/gallery-image-available"
 
 import { ErrorBoundary } from "@/components/error-boundary"
 
@@ -150,7 +151,7 @@ function App() {
                 href={`${import.meta.env.BASE_URL}experience/${exp.slug}/`}
                 className="block min-w-0 no-underline text-inherit"
               >
-                <Card className="cursor-pointer">
+                <Card className="group/exp cursor-pointer overflow-hidden">
                   <CardHeader>
                     <CardTitle>{exp.title}</CardTitle>
                     <CardDescription>
@@ -159,6 +160,17 @@ function App() {
                       <span className="font-mono text-[11px]">{exp.duration}</span>
                     </CardDescription>
                   </CardHeader>
+                  {cardCover(exp) ? (
+                    <div className="-mx-4 overflow-hidden border-y border-border bg-[#F4F1EA]">
+                      <img
+                        src={resolveProjectAssetHref(cardCover(exp)!)}
+                        alt=""
+                        className="aspect-[2/1] w-full object-cover object-top transition-transform duration-500 group-hover/exp:scale-[1.03]"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ) : null}
                   <CardContent className="min-w-0 space-y-3">
                     <p className="text-sm leading-relaxed text-muted-foreground">{exp.blurb}</p>
                     {exp.metrics.length > 0 ? (
@@ -188,8 +200,9 @@ function App() {
           <div className="grid gap-4">
             {projectDetails.map((project) => {
               const posterPageHref = `${import.meta.env.BASE_URL}projects/${project.slug}/`
+              const cover = cardCover(project)
               return (
-                <Card key={project.slug}>
+                <Card key={project.slug} className="group/project overflow-hidden">
                   <CardHeader>
                     <CardTitle>
                       <a href={posterPageHref} className="text-inherit no-underline hover:underline">
@@ -198,6 +211,22 @@ function App() {
                     </CardTitle>
                     <CardDescription>{project.subtitle}</CardDescription>
                   </CardHeader>
+                  {cover ? (
+                    <a
+                      href={posterPageHref}
+                      className="-mx-4 block overflow-hidden border-y border-border bg-[#F4F1EA]"
+                      tabIndex={-1}
+                      aria-hidden
+                    >
+                      <img
+                        src={resolveProjectAssetHref(cover)}
+                        alt=""
+                        className="aspect-[2/1] w-full object-cover object-top transition-transform duration-500 group-hover/project:scale-[1.03]"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  ) : null}
                   <CardContent className="space-y-4">
                     {project.award ? <AwardBadge award={project.award} /> : null}
                     <div className="flex flex-wrap gap-2">
@@ -246,6 +275,12 @@ function App() {
       <Nav />
     </div>
   )
+}
+
+/** The card image: the item's `cover`, else its first gallery image on disk. */
+function cardCover(item: { cover?: string; gallery: { imageHref?: string }[] }): string | undefined {
+  if (item.cover && isGalleryImageFileAvailable(item.cover)) return item.cover
+  return item.gallery.find((g) => g.imageHref && isGalleryImageFileAvailable(g.imageHref))?.imageHref
 }
 
 function SectionTitle({ children }: { children: ReactNode }) {

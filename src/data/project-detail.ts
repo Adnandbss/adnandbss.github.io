@@ -30,6 +30,8 @@ export type ProjectDetail = {
   problem: string
   approach: string
   outcome: string
+  /** Image on the home card, under `public/`. Defaults to the first gallery image. */
+  cover?: string
   gallery: ProjectGalleryItem[]
 }
 
@@ -173,6 +175,7 @@ export const projectDetails: ProjectDetail[] = [
       "A Star-CCM+ model of the pack and the coolant, with temperature probes in the solid, at the interface, and in the outlet. The flow comparison is 0.8 kg/s against 1.2 kg/s. The geometry comparison opens the gap between cells from 2 mm to 4 mm, then the gap around the pack from 5 mm to 10 mm. The fluid comparison replaces SF10 with water–glycol, then with Novec 7200.",
     outcome:
       "Raising the flow from 0.8 to 1.2 kg/s drops the reported peak from 71°C to 58°C, and the residuals settle. A pump that can hold 1.2 kg/s is not the practical case: the report puts the realistic ceiling near 0.8 kg/s, where the solid probe is still climbing and the interface sits near 25°C. Opening the gap between cells from 2 mm to 4 mm gives the fluid a wider path and is the better of the two spacings we ran; a 3 mm case would still be worth checking. Opening the outer gap to 10 mm cools the pack, and the center and the edge can differ by about 8°C. The fluid decides more than the flow. Water–glycol, with a conductivity of 0.37 W/(m·K), levels the solid probe off near 42°C. Novec 7200, at 0.065 W/(m·K), is still climbing past 70°C. For an ordinary vehicle, water–glycol. Novec only if the fluid has to survive a much wider temperature range.",
+    cover: "images/projects/battery-cooling/4.png",
     gallery: [
       {
         id: "bc1",
