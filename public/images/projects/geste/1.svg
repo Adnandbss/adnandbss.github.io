@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<title id="t">Geste — from the workbench to the lab</title>
+<desc id="d">An artisan films their workbench while narrating. The video is segmented into timestamped gestures, each aligned with the transcript, cut into one clip per gesture, and every clip is hashed into a manifest the artisan signs with EIP-712.</desc>
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#1F6B4A" stroke-width="1.6"/></marker>
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace}
+    .card{fill:#FFFFFF;stroke:#EADFD3;stroke-width:1.2}
+    .num{font-size:13px;fill:#1F6B4A;letter-spacing:.06em}
+    .ttl{font-size:21px;font-weight:700;fill:#17352A}
+    .txt{font-size:14px;fill:#5E6B64}
+  </style>
+</defs>
+<rect width="1200" height="620" fill="#FFF8F1"/>
+<text x="60" y="68" class="mono" font-size="12" fill="#1F6B4A" letter-spacing=".22em">GESTE · FROM THE WORKBENCH TO THE LAB</text>
+<text x="60" y="112" font-size="34" font-weight="700" fill="#17352A" letter-spacing="-.02em">A gesture becomes <tspan fill="#1F6B4A">a dataset.</tspan></text>
+
+<!-- 01 Film -->
+<g transform="translate(60 160)">
+  <rect class="card" width="196" height="262" rx="16"/>
+  <text x="20" y="36" class="mono num">01</text>
+  <text x="20" y="68" class="ttl">Film</text>
+  <text x="20" y="96" class="txt">The artisan films the</text>
+  <text x="20" y="116" class="txt">workbench, narrating.</text>
+  <rect x="58" y="140" width="56" height="96" rx="10" fill="#17352A"/>
+  <rect x="63" y="148" width="46" height="76" rx="4" fill="#E8D5BC"/>
+  <ellipse cx="86" cy="190" rx="16" ry="11" fill="#F3E2B3"/>
+  <rect x="70" y="200" width="10" height="20" rx="4" fill="#B0714E"/>
+  <rect x="92" y="200" width="10" height="20" rx="4" fill="#B0714E"/>
+  <circle cx="102" cy="156" r="3.2" fill="#D94A3A"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <g stroke="#1F6B4A" stroke-width="2.4" stroke-linecap="round">
+    <line x1="132" y1="180" x2="132" y2="196"/><line x1="140" y1="172" x2="140" y2="204"/><line x1="148" y1="182" x2="148" y2="194"/><line x1="156" y1="176" x2="156" y2="200"/><line x1="164" y1="184" x2="164" y2="192"/>
+  </g>
+</g>
+
+<!-- 02 Segment -->
+<g transform="translate(278 160)">
+  <rect class="card" width="196" height="262" rx="16"/>
+  <text x="20" y="36" class="mono num">02</text>
+  <text x="20" y="68" class="ttl">Segment</text>
+  <text x="20" y="96" class="txt">Video cut into</text>
+  <text x="20" y="116" class="txt">timestamped gestures.</text>
+  <rect x="20" y="168" width="156" height="30" rx="6" fill="#F4ECE2"/>
+  <rect x="24" y="172" width="40" height="22" rx="4" fill="#C98B5A"/>
+  <rect x="68" y="172" width="28" height="22" rx="4" fill="#E2B98F"/>
+  <rect x="100" y="172" width="46" height="22" rx="4" fill="#A5673F"/>
+  <rect x="150" y="172" width="22" height="22" rx="4" fill="#E2B98F"/>
+  <g class="mono" font-size="10.5" fill="#8A7C6E">
+    <text x="24" y="218">00:04</text><text x="76" y="218">00:11</text><text x="128" y="218">00:16</text>
+  </g>
+  <line x1="24" y1="162" x2="24" y2="204" stroke="#17352A" stroke-width="1.5"><animate attributeName="x1" values="24;172;24" dur="6s" repeatCount="indefinite"/><animate attributeName="x2" values="24;172;24" dur="6s" repeatCount="indefinite"/></line>
+</g>
+
+<!-- 03 Align -->
+<g transform="translate(496 160)">
+  <rect class="card" width="196" height="262" rx="16"/>
+  <text x="20" y="36" class="mono num">03</text>
+  <text x="20" y="68" class="ttl">Align</text>
+  <text x="20" y="96" class="txt">Each gesture matched</text>
+  <text x="20" y="116" class="txt">to the transcript.</text>
+  <rect x="24" y="150" width="40" height="16" rx="4" fill="#C98B5A"/>
+  <rect x="68" y="150" width="28" height="16" rx="4" fill="#E2B98F"/>
+  <rect x="100" y="150" width="46" height="16" rx="4" fill="#A5673F"/>
+  <g stroke="#1F6B4A" stroke-width="1.3" stroke-dasharray="3 3">
+    <line x1="44" y1="166" x2="44" y2="196"/><line x1="82" y1="166" x2="82" y2="196"/><line x1="123" y1="166" x2="123" y2="196"/>
+  </g>
+  <g font-size="11.5" fill="#17352A">
+    <rect x="20" y="196" width="50" height="22" rx="11" fill="#E6F0EA"/><text x="28" y="211">“fold”</text>
+    <rect x="62" y="226" width="58" height="22" rx="11" fill="#E6F0EA"/><text x="70" y="241">“press”</text>
+    <rect x="104" y="196" width="72" height="22" rx="11" fill="#E6F0EA"/><text x="112" y="211">“turn it”</text>
+  </g>
+</g>
+
+<!-- 04 Clip -->
+<g transform="translate(714 160)">
+  <rect class="card" width="196" height="262" rx="16"/>
+  <text x="20" y="36" class="mono num">04</text>
+  <text x="20" y="68" class="ttl">Clip</text>
+  <text x="20" y="96" class="txt">One clip per</text>
+  <text x="20" y="116" class="txt">gesture.</text>
+  <g>
+    <rect x="58" y="144" width="96" height="62" rx="8" fill="#E8D5BC" stroke="#C98B5A" stroke-width="1.2"/>
+    <rect x="48" y="154" width="96" height="62" rx="8" fill="#EFDFC8" stroke="#C98B5A" stroke-width="1.2"/>
+    <rect x="38" y="164" width="96" height="62" rx="8" fill="#F6EADB" stroke="#A5673F" stroke-width="1.4"/>
+    <path d="M78 183 L98 195 L78 207 Z" fill="#17352A"/>
+  </g>
+  <text x="38" y="246" class="mono" font-size="10.5" fill="#8A7C6E">clip_03 · 00:16 → 00:21</text>
+</g>
+
+<!-- 05 Sign -->
+<g transform="translate(932 160)">
+  <rect class="card" width="196" height="262" rx="16" stroke="#1F6B4A" stroke-width="1.6"/>
+  <text x="20" y="36" class="mono num">05</text>
+  <text x="20" y="68" class="ttl">Sign</text>
+  <text x="20" y="96" class="txt">Clips hashed into a</text>
+  <text x="20" y="116" class="txt">manifest the artisan signs.</text>
+  <rect x="26" y="138" width="116" height="104" rx="8" fill="#FBF6EF" stroke="#D9CBBB"/>
+  <text x="36" y="158" class="mono" font-size="10" fill="#17352A" font-weight="700">manifest.json</text>
+  <g class="mono" font-size="10" fill="#7A6E62">
+    <text x="36" y="178">clip_01  9f3a…</text><text x="36" y="194">clip_02  41c7…</text><text x="36" y="210">clip_03  e08b…</text>
+  </g>
+  <g transform="translate(150 222)">
+    <circle r="28" fill="#1F6B4A"/>
+    <circle r="22" fill="none" stroke="#FFF8F1" stroke-width="1" stroke-dasharray="2 2"/>
+    <text y="-2" text-anchor="middle" class="mono" font-size="9.5" fill="#FFF8F1" font-weight="700">EIP-712</text>
+    <text y="11" text-anchor="middle" font-size="9" fill="#CFE6D9">signed</text>
+  </g>
+</g>
+
+<!-- arrows -->
+<g stroke="#1F6B4A" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+  <line x1="259" y1="290" x2="274" y2="290"/><line x1="477" y1="290" x2="492" y2="290"/><line x1="695" y1="290" x2="710" y2="290"/><line x1="913" y1="290" x2="928" y2="290"/>
+</g>
+
+<!-- band -->
+<rect x="60" y="454" width="1068" height="110" rx="16" fill="#17352A"/>
+<text x="92" y="496" class="mono" font-size="11.5" fill="#8FC7A8" letter-spacing=".2em">PROVENANCE + CONSENT</text>
+<text x="92" y="530" font-size="20" font-weight="600" fill="#FFF8F1">Every clip traces back to a signed, verifiable manifest.</text>
+<line x1="808" y1="478" x2="808" y2="540" stroke="#2E5A47"/>
+<text x="840" y="530" font-size="44" font-weight="800" fill="#8FC7A8" letter-spacing="-.02em">70%</text>
+<text x="948" y="510" font-size="15" fill="#FFF8F1">of every sale</text>
+<text x="948" y="532" font-size="15" fill="#FFF8F1">goes to the artisan</text>
+</svg>

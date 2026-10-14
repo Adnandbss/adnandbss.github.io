@@ -10,6 +10,7 @@ import { ContactLinks } from "@/components/contact-links"
 import { ProjectDownloadLinks } from "@/components/project-download-links"
 import DecryptedText from "@/components/decrypted-text"
 import { ResumeChip } from "@/components/resume-chip"
+import { AwardBadge } from "@/components/award-badge"
 
 import { ErrorBoundary } from "@/components/error-boundary"
 
@@ -71,7 +72,7 @@ function App() {
             </div>
             <ResumeChip className="mt-1.5" />
           </div>
-          {site.schools || site.specializations ? (
+          {site.schools || site.specializations || site.awards.length > 0 ? (
             <dl className="mt-4 grid grid-cols-[5.5rem_1fr] items-baseline gap-x-3 gap-y-1.5 text-sm">
               {site.schools ? (
                 <>
@@ -87,6 +88,24 @@ function App() {
                     Focus
                   </dt>
                   <dd className="text-pretty text-muted-foreground">{site.specializations}</dd>
+                </>
+              ) : null}
+              {site.awards.length > 0 ? (
+                <>
+                  <dt className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-foreground/40">
+                    Awards
+                  </dt>
+                  <dd className="flex flex-wrap gap-2 pt-0.5">
+                    {site.awards.map((award) => (
+                      <a
+                        key={award.projectSlug}
+                        href={`${import.meta.env.BASE_URL}projects/${award.projectSlug}/`}
+                        className="no-underline transition-opacity hover:opacity-80"
+                      >
+                        <AwardBadge award={award.label} />
+                      </a>
+                    ))}
+                  </dd>
                 </>
               ) : null}
             </dl>
@@ -180,6 +199,7 @@ function App() {
                     <CardDescription>{project.subtitle}</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
+                    {project.award ? <AwardBadge award={project.award} /> : null}
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Badge key={tag} variant="outline" className="rounded-none text-xs">
