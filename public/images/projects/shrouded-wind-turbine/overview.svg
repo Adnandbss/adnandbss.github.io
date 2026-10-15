@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">
+<title id="t">Shrouded wind turbine — built for a tip-speed ratio of 1, peaks near 2</title>
+<desc id="d">Measured power coefficient against tip-speed ratio for a seven-blade rotor in a NACA diffuser, 3D-printed and tested in the LIFSE wind tunnel. At 10 m/s the coefficient peaks at 0.55 at a tip-speed ratio of 1.94; at the ratio of 1 set in the brief it is about 0.43. At 13 m/s it peaks at 0.50. Peak torque is 16 mN·m at 10 m/s and 25 mN·m at 13 m/s. The generator was calibrated on a bench at 0.05 N·m per ampere. Group project with Mehdi Chtourou, Clara Giordano, Yannis Yessis and Zhengxuan Zhang.</desc>
+<defs>
+  <marker id="sm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#7A766E"/></marker>
+</defs>
+<rect width="1200" height="620" fill="#F5F3EE"/>
+
+<!-- headline -->
+<text x="56" y="64" font-size="14" letter-spacing=".2em" fill="#7A766E">SHROUDED WIND TURBINE · LIFSE WIND TUNNEL</text>
+<text x="56" y="116" font-size="44" font-weight="700" fill="#141414">Built for λ = 1. Peaks at λ ≈ 2.</text>
+<text x="56" y="154" font-size="19" fill="#4A4740">Seven blades in a NACA diffuser, 3D-printed, measured at 10 and 13 m/s.</text>
+<text x="56" y="180" font-size="19" fill="#4A4740">Group project with M. Chtourou, C. Giordano, Y. Yessis, Z. Zhang.</text>
+
+<!-- left: measured Cp(λ) -->
+<text x="56" y="236" font-size="13" letter-spacing=".2em" fill="#7A766E">POWER COEFFICIENT, MEASURED</text>
+<g font-size="13" fill="#4A4740">
+  <circle cx="486" cy="232" r="5" fill="#2A78D6"/><text x="496" y="237">10 m/s</text>
+  <circle cx="576" cy="232" r="5" fill="#EB6834"/><text x="586" y="237">13 m/s</text>
+</g>
+<g stroke="#E1E0D9" stroke-width="1">
+  <line x1="110" y1="262" x2="700" y2="262"/><line x1="110" y1="309.6" x2="700" y2="309.6"/><line x1="110" y1="357.2" x2="700" y2="357.2"/><line x1="110" y1="404.8" x2="700" y2="404.8"/><line x1="110" y1="452.4" x2="700" y2="452.4"/>
+</g>
+<g stroke="#C3C2B7" stroke-width="1"><line x1="110" y1="500" x2="700" y2="500"/><line x1="110" y1="262" x2="110" y2="500"/></g>
+<g font-size="13" fill="#898781" text-anchor="end">
+  <text x="102" y="266">0.6</text><text x="102" y="313.6">0.5</text><text x="102" y="361.2">0.4</text><text x="102" y="408.8">0.3</text><text x="102" y="456.4">0.2</text><text x="102" y="504">0.1</text>
+</g>
+<g font-size="13" fill="#898781" text-anchor="middle">
+  <text x="110" y="520">0</text><text x="223.5" y="520">0.5</text><text x="336.9" y="520">1</text><text x="450.4" y="520">1.5</text><text x="563.8" y="520">2</text><text x="677.3" y="520">2.5</text>
+</g>
+<text x="405" y="546" font-size="15" fill="#4A4740" text-anchor="middle">tip-speed ratio λ</text>
+<text transform="translate(66 381) rotate(-90)" font-size="15" fill="#4A4740" text-anchor="middle">power coefficient Cp</text>
+
+<!-- brief -->
+<line x1="336.9" y1="262" x2="336.9" y2="500" stroke="#141414" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="344" y="492" font-size="15" font-weight="700" fill="#141414">brief: λ = 1</text>
+
+<!-- 13 m/s -->
+<path d="M197.6 484.0 L226.6 456.2 L411.3 328.6 L449.2 319.5 L501.9 313.5 L529.6 308.6 L552.0 309.6 L577.0 311.7 L596.1 314.2 L609.5 317.8 L615.8 324.6 L626.0 330.4 L641.4 331.9 L656.2 329.0 L662.8 333.8 L662.8 342.7 L674.8 344.7 L676.8 348.7 L680.2 352.6 L687.3 355.4" fill="none" stroke="#EB6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g fill="#EB6834" stroke="#F5F3EE" stroke-width="2">
+  <circle cx="197.6" cy="484.0" r="4"/> <circle cx="226.6" cy="456.2" r="4"/> <circle cx="411.3" cy="328.6" r="4"/> <circle cx="449.2" cy="319.5" r="4"/> <circle cx="501.9" cy="313.5" r="4"/> <circle cx="529.6" cy="308.6" r="4"/> <circle cx="552.0" cy="309.6" r="4"/> <circle cx="577.0" cy="311.7" r="4"/> <circle cx="596.1" cy="314.2" r="4"/> <circle cx="609.5" cy="317.8" r="4"/> <circle cx="615.8" cy="324.6" r="4"/> <circle cx="626.0" cy="330.4" r="4"/> <circle cx="641.4" cy="331.9" r="4"/> <circle cx="656.2" cy="329.0" r="4"/> <circle cx="662.8" cy="333.8" r="4"/> <circle cx="662.8" cy="342.7" r="4"/> <circle cx="674.8" cy="344.7" r="4"/> <circle cx="676.8" cy="348.7" r="4"/> <circle cx="680.2" cy="352.6" r="4"/> <circle cx="687.3" cy="355.4" r="4"/>
+</g>
+<!-- 10 m/s -->
+<path d="M246.2 428.0 L326.5 349.6 L366.0 328.7 L390.2 320.4 L401.4 307.8 L439.5 294.7 L463.8 289.1 L482.8 289.1 L503.0 287.7 L518.5 285.4 L532.5 286.8 L551.1 285.0 L559.8 285.2 L567.2 292.2 L570.4 293.8 L579.3 298.9 L591.1 297.4 L601.7 295.1 L613.3 293.7 L620.8 294.8" fill="none" stroke="#2A78D6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g fill="#2A78D6" stroke="#F5F3EE" stroke-width="2">
+  <circle cx="246.2" cy="428.0" r="4"/> <circle cx="326.5" cy="349.6" r="4"/> <circle cx="366.0" cy="328.7" r="4"/> <circle cx="390.2" cy="320.4" r="4"/> <circle cx="401.4" cy="307.8" r="4"/> <circle cx="439.5" cy="294.7" r="4"/> <circle cx="463.8" cy="289.1" r="4"/> <circle cx="482.8" cy="289.1" r="4"/> <circle cx="503.0" cy="287.7" r="4"/> <circle cx="518.5" cy="285.4" r="4"/> <circle cx="532.5" cy="286.8" r="4"/> <circle cx="551.1" cy="285.0" r="4"/> <circle cx="559.8" cy="285.2" r="4"/> <circle cx="567.2" cy="292.2" r="4"/> <circle cx="570.4" cy="293.8" r="4"/> <circle cx="579.3" cy="298.9" r="4"/> <circle cx="591.1" cy="297.4" r="4"/> <circle cx="601.7" cy="295.1" r="4"/> <circle cx="613.3" cy="293.7" r="4"/> <circle cx="620.8" cy="294.8" r="4"/>
+</g>
+<!-- annotations -->
+<circle cx="336.9" cy="344.1" r="6" fill="none" stroke="#141414" stroke-width="1.5"/>
+<text x="330" y="336" font-size="15" fill="#141414" text-anchor="end">Cp ≈ 0.43</text>
+<text x="540" y="273" font-size="15" font-weight="700" fill="#141414" text-anchor="end">peak Cp 0.55 at λ 1.94</text>
+<text x="628" y="290" font-size="13" fill="#4A4740">10 m/s</text>
+<text x="640" y="380" font-size="13" fill="#4A4740">13 m/s</text>
+<line x1="730" y1="226" x2="730" y2="556" stroke="#E1E0D9" stroke-width="1"/>
+
+<!-- right: the machine, in section -->
+<text x="760" y="236" font-size="13" letter-spacing=".2em" fill="#7A766E">THE MACHINE</text>
+<g transform="translate(760 256)">
+  <g stroke="#7A766E" stroke-width="1.5" marker-end="url(#sm)"><line x1="0" y1="64" x2="56" y2="64"/><line x1="0" y1="100" x2="56" y2="100"/><line x1="0" y1="136" x2="56" y2="136"/></g>
+  <text x="0" y="44" font-size="13" fill="#7A766E">wind</text>
+  <rect x="150" y="112" width="8" height="90" fill="#FFFFFF" stroke="#141414" stroke-width="1.2"/>
+  <path d="M100 50 C130 34 210 26 340 6 L342 16 C214 38 136 50 106 60 Z" fill="#FFFFFF" stroke="#141414" stroke-width="1.2"/>
+  <path d="M100 150 C130 166 210 174 340 194 L342 184 C214 162 136 150 106 140 Z" fill="#FFFFFF" stroke="#141414" stroke-width="1.2"/>
+  <rect x="138" y="58" width="4" height="84" fill="#141414"/>
+  <rect x="140" y="88" width="16" height="24" fill="#FFFFFF" stroke="#141414" stroke-width="1.2"/>
+  <path d="M140 88 Q108 100 140 112 Z" fill="#FFFFFF" stroke="#141414" stroke-width="1.2"/>
+  <g font-size="13" fill="#4A4740">
+    <text x="232" y="70">NACA diffuser</text>
+    <text x="172" y="104">7 blades · 13.7°</text>
+    <text x="88" y="84" text-anchor="end">nose</text>
+    <text x="166" y="196">mast</text>
+  </g>
+</g>
+<text x="760" y="486" font-size="15" fill="#4A4740">peak torque</text>
+<text x="760" y="526" font-size="34" font-weight="700" fill="#141414">16 mN·m</text>
+<text x="760" y="550" font-size="13" fill="#7A766E">10 m/s · 25 mN·m at 13 m/s</text>
+<text x="980" y="486" font-size="15" fill="#4A4740">generator constant</text>
+<text x="980" y="526" font-size="34" font-weight="700" fill="#141414">0.05</text>
+<text x="980" y="550" font-size="13" fill="#7A766E">N·m/A, on a bench</text>
+</svg>

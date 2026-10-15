@@ -2,26 +2,32 @@ import { resolveProjectAssetHref } from "@/data/project-detail"
 
 const shots = [
   {
+    src: "images/experience/greenflex/overview.svg",
+    caption: "Built as an intern, then sold as a paid deliverable on every ISO 50001 mission since",
+    width: 1200,
+    height: 620,
+  },
+  {
     src: "images/experience/greenflex/1.png",
-    caption: "Site level — gas, consumption against the reference",
-    width: 942,
-    height: 536,
+    caption: "Site level — gas, real consumption against the modelled reference, and the savings month by month",
+    width: 999,
+    height: 568,
   },
   {
     src: "images/experience/greenflex/2.png",
-    caption: "Equipment level — boilers and HVAC, week by week",
-    width: 1014,
-    height: 566,
+    caption: "Significant energy uses — boilers and HVAC week by week, inside the model's error band",
+    width: 1393,
+    height: 777,
   },
   {
     src: "images/experience/greenflex/3.png",
-    caption: "What drives the load — degree-days against consumption",
-    width: 968,
-    height: 534,
+    caption: "Influencing factors — cooling degree-days against HVAC gas, correlation 93.8%",
+    width: 951,
+    height: 523,
   },
   {
     src: "images/experience/greenflex/4.png",
-    caption: "Forecast — auxiliary boiler, realised load and the model",
+    caption: "Seasonal model — auxiliary boiler, one model for summer and one for winter, against the realised load",
     width: 916,
     height: 300,
   },

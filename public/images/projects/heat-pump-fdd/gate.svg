@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">
+<title id="t">Heat Pump FDD — a score does not earn a visit</title>
+<desc id="d">The classifier is trained on a simulator. Accuracy is 89.3% on held-out simulated runs and 45.4% on 2,846 real NIST chamber tests, against 28.1% for always guessing the most common class; an earlier 99.6% was a label leak. Per fault class, the F1 on real units is 0.52 for refrigerant overcharge, 0.45 for undercharge, 0.03 for the evaporator fan and 0.00 for condenser fouling. Only classes at or above the 0.40 gate are dispatched; the others, and classes never tested on real units, go to engineering review. A dispatch also needs a confidence of at least 0.60.</desc>
+<rect width="1200" height="620" fill="#F5F3EE"/>
+
+<!-- headline -->
+<text x="56" y="64" font-size="14" letter-spacing=".2em" fill="#7A766E">HEAT PUMP FDD · SERVICE DISPATCH</text>
+<text x="56" y="116" font-size="44" font-weight="700" fill="#141414">A score does not earn a visit.</text>
+<text x="56" y="154" font-size="19" fill="#4A4740">Trained on a simulator, checked on real chamber tests (NIST).</text>
+<text x="56" y="180" font-size="19" fill="#4A4740">A fault class sends a truck only if it holds up there.</text>
+
+<!-- left: the drop from simulator to real units -->
+<text x="56" y="236" font-size="13" letter-spacing=".2em" fill="#7A766E">ACCURACY</text>
+<text x="56" y="268" font-size="17" fill="#4A4740">Simulator, held-out runs</text>
+<text x="56" y="326" font-size="60" font-weight="700" fill="#141414">89.3%</text>
+<text x="56" y="368" font-size="17" fill="#4A4740">Real units (NIST)</text>
+<text x="56" y="426" font-size="60" font-weight="700" fill="#141414">45.4%</text>
+<text x="56" y="466" font-size="15" fill="#7A766E">Most-common-class guess: 28.1%</text>
+<text x="56" y="492" font-size="15" fill="#7A766E">An earlier 99.6% was a label leak.</text>
+<line x1="410" y1="226" x2="410" y2="556" stroke="#E1E0D9" stroke-width="1"/>
+
+<!-- right: per-class F1 on real units against the gate -->
+<text x="440" y="236" font-size="13" letter-spacing=".2em" fill="#7A766E">F1 ON REAL UNITS, PER FAULT</text>
+<g stroke-width="1">
+  <line x1="770" y1="270" x2="770" y2="456" stroke="#E1E0D9"/>
+  <line x1="1010" y1="270" x2="1010" y2="456" stroke="#E1E0D9"/>
+  <line x1="650" y1="270" x2="650" y2="456" stroke="#C3C2B7"/>
+</g>
+<g font-size="13" fill="#898781" text-anchor="middle">
+  <text x="650" y="478">0</text><text x="770" y="478">0.2</text><text x="890" y="478">0.4</text><text x="1010" y="478">0.6</text>
+</g>
+<!-- bars: 22px, 4px rounded data end, square at the baseline -->
+<path d="M650 285 H959.2 Q963.2 285 963.2 289 V303 Q963.2 307 959.2 307 H650 Z" fill="#2A78D6"/>
+<path d="M650 333 H913 Q917 333 917 337 V351 Q917 355 913 355 H650 Z" fill="#2A78D6"/>
+<path d="M650 381 H664.6 Q668.6 381 668.6 385 V399 Q668.6 403 664.6 403 H650 Z" fill="#B9B7AE"/>
+<g font-size="17" fill="#141414" text-anchor="end">
+  <text x="634" y="302">Overcharge</text>
+  <text x="634" y="350">Undercharge</text>
+  <text x="634" y="398" fill="#4A4740">Evaporator fan</text>
+  <text x="634" y="446" fill="#4A4740">Condenser fouling</text>
+</g>
+<g font-size="16" fill="#141414">
+  <text x="971" y="302">0.52</text>
+  <text x="925" y="350">0.45</text>
+  <text x="677" y="398" fill="#4A4740">0.03</text>
+  <text x="658" y="446" fill="#4A4740">0.00</text>
+</g>
+<line x1="890" y1="270" x2="890" y2="456" stroke="#141414" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="890" y="262" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">gate 0.40</text>
+<g font-size="16">
+  <text x="1036" y="302" font-weight="700" fill="#141414">→ dispatch</text>
+  <text x="1036" y="350" font-weight="700" fill="#141414">→ dispatch</text>
+  <text x="1036" y="398" fill="#7A766E">→ review</text>
+  <text x="1036" y="446" fill="#7A766E">→ review</text>
+</g>
+<text x="440" y="520" font-size="15" fill="#7A766E">Untested on real units (condenser fan, evaporator fouling) → review.</text>
+<text x="440" y="546" font-size="15" fill="#7A766E">A dispatch also needs confidence ≥ 0.60. Data: 2,846 NIST tests.</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">
+<title id="t">Greenflex energy dashboard — built solo as an intern, sold on every mission</title>
+<desc id="d">A Power BI and VBA dashboard for gas and electricity, built solo during an internship at Greenflex from September 2024 to February 2025. It was first sold on a pharmaceutical consulting mission and has since been sold as a paid deliverable on every ISO 50001 engagement. An Excel workbook and a VBA macro compute a modelled reference from regression equations on the influencing factors; Power BI compares real consumption with that reference, inside an error band, from the site down to each significant energy use such as boilers and HVAC, and checks each factor, as with cooling degree-days against HVAC gas at a correlation of 93.8%. The anomalies it flagged led to a 22% cut in energy use, and the decarbonization roadmaps built on it project a 45% cut in greenhouse-gas emissions. The small drawings of the four steps are pictograms, not data.</desc>
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#7A766E"/></marker>
+  <marker id="go" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#2A78D6"/></marker>
+</defs>
+<rect width="1200" height="620" fill="#F5F3EE"/>
+
+<!-- headline -->
+<text x="56" y="64" font-size="14" letter-spacing=".2em" fill="#7A766E">GREENFLEX · ENERGY DASHBOARD · ISO 50001</text>
+<text x="56" y="114" font-size="40" font-weight="700" fill="#141414">Built as an intern. Sold on every mission.</text>
+<text x="56" y="154" font-size="19" fill="#4A4740">Power BI + VBA, gas and electricity. First sold on a pharmaceutical mission,</text>
+<text x="56" y="180" font-size="19" fill="#4A4740">it has been a paid deliverable on every ISO 50001 engagement since.</text>
+
+<!-- timeline: from internship to service -->
+<text x="56" y="228" font-size="13" letter-spacing=".2em" fill="#7A766E">FROM INTERNSHIP TO SERVICE</text>
+<line x1="70" y1="262" x2="820" y2="262" stroke="#C3C2B7" stroke-width="2"/>
+<line x1="820" y1="262" x2="1124" y2="262" stroke="#2A78D6" stroke-width="6" stroke-linecap="round" marker-end="url(#go)"/>
+<circle cx="90" cy="262" r="7" fill="#141414" stroke="#F5F3EE" stroke-width="2"/>
+<circle cx="450" cy="262" r="7" fill="#141414" stroke="#F5F3EE" stroke-width="2"/>
+<circle cx="820" cy="262" r="9" fill="#2A78D6" stroke="#F5F3EE" stroke-width="2"/>
+<g font-size="17" font-weight="700" fill="#141414">
+  <text x="90" y="296">Built solo, as an intern</text>
+  <text x="450" y="296">First sale</text>
+  <text x="820" y="296">Sold on every mission</text>
+</g>
+<g font-size="14" fill="#4A4740">
+  <text x="90" y="318">Sep 2024 – Feb 2025</text>
+  <text x="450" y="318">a pharmaceutical client</text>
+  <text x="820" y="318">paid, in every ISO 50001 engagement</text>
+</g>
+
+<!-- the product, in four steps (pictograms) -->
+<text x="56" y="362" font-size="13" letter-spacing=".2em" fill="#7A766E">WHAT IT DOES</text>
+<g fill="#FFFFFF" stroke="#E1E0D9" stroke-width="1">
+  <rect x="56" y="374" width="236" height="64"/><rect x="340" y="374" width="236" height="64"/><rect x="624" y="374" width="236" height="64"/><rect x="908" y="374" width="236" height="64"/>
+</g>
+<g stroke="#7A766E" stroke-width="1.5" marker-end="url(#ar)"><line x1="298" y1="406" x2="334" y2="406"/><line x1="582" y1="406" x2="618" y2="406"/><line x1="866" y1="406" x2="902" y2="406"/></g>
+<!-- 01: the Excel sheets a VBA macro assembles -->
+<g transform="translate(110 384)">
+  <rect x="0" y="0" width="128" height="44" fill="#FFFFFF" stroke="#B9B7AE" stroke-width="1"/>
+  <rect x="0" y="0" width="128" height="9" fill="#E1E0D9"/>
+  <rect x="64" y="9" width="32" height="35" fill="#2A78D6" fill-opacity=".18"/>
+  <g stroke="#B9B7AE" stroke-width="1">
+    <line x1="32" y1="0" x2="32" y2="44"/><line x1="64" y1="0" x2="64" y2="44"/><line x1="96" y1="0" x2="96" y2="44"/>
+    <line x1="0" y1="18" x2="128" y2="18"/><line x1="0" y1="27" x2="128" y2="27"/><line x1="0" y1="36" x2="128" y2="36"/>
+  </g>
+</g>
+<!-- 02: real against the modelled reference, with the error band -->
+<g transform="translate(382.5 374) scale(.64)">
+  <path d="M14 70 C50 66 70 30 110 26 S170 60 222 54 L222 70 C170 76 150 42 110 42 S50 82 14 86 Z" fill="#2A78D6" fill-opacity=".12"/>
+  <path d="M14 78 C50 74 70 38 110 34 S170 68 222 62" fill="none" stroke="#141414" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M14 80 C46 70 72 30 108 36 S166 62 222 58" fill="none" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+</g>
+<!-- 03: site, then each significant use -->
+<g transform="translate(666.5 374) scale(.64)">
+  <rect x="14" y="16" width="170" height="12" fill="#B9B7AE"/>
+  <rect x="14" y="36" width="124" height="12" fill="#2A78D6"/>
+  <rect x="14" y="56" width="92" height="12" fill="#B9B7AE"/>
+  <rect x="14" y="76" width="58" height="12" fill="#B9B7AE"/>
+</g>
+<!-- 04: influencing factor against consumption -->
+<g transform="translate(950.5 374) scale(.64)">
+  <line x1="18" y1="86" x2="214" y2="20" stroke="#141414" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <g fill="#2A78D6" stroke="#FFFFFF" stroke-width="2">
+    <circle cx="24" cy="80" r="5"/><circle cx="38" cy="82" r="5"/><circle cx="52" cy="72" r="5"/><circle cx="66" cy="70" r="5"/><circle cx="80" cy="68" r="5"/><circle cx="94" cy="60" r="5"/><circle cx="110" cy="58" r="5"/><circle cx="126" cy="50" r="5"/><circle cx="142" cy="48" r="5"/><circle cx="158" cy="40" r="5"/><circle cx="174" cy="38" r="5"/><circle cx="190" cy="30" r="5"/><circle cx="206" cy="24" r="5"/>
+  </g>
+</g>
+<g font-size="14" fill="#141414">
+  <text x="56" y="460">Excel + VBA engine</text>
+  <text x="340" y="460">real vs modelled reference</text>
+  <text x="624" y="460">site → each use, weekly</text>
+  <text x="908" y="460">factor check: r = 93.8%</text>
+</g>
+
+<!-- outcomes -->
+<line x1="56" y1="484" x2="1144" y2="484" stroke="#E1E0D9" stroke-width="1"/>
+<text x="56" y="532" font-size="40" font-weight="700" fill="#141414">−22%</text>
+<text x="56" y="556" font-size="14" fill="#4A4740">energy use, from the anomalies it flagged</text>
+<text x="476" y="532" font-size="40" font-weight="700" fill="#141414">−45%</text>
+<text x="476" y="556" font-size="14" fill="#4A4740">GHG, projected in the roadmaps</text>
+<text x="820" y="532" font-size="40" font-weight="700" fill="#141414">ISO 50001</text>
+<text x="820" y="556" font-size="14" fill="#4A4740">the standard every mission runs to</text>
+</svg>

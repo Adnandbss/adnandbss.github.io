@@ -83,8 +83,13 @@ export const projectDetails: ProjectDetail[] = [
     approach:
       "A vapor-compression simulator (CoolProp, R410A) and a classifier on Li & Braun thermodynamic residuals, checked against 7375 NIST chamber tests. Every figure is logged with its protocol in outputs/results.csv, and the Evidence page shows the number next to that protocol. The product is the gate: dispatch only if X5/sim2real F1 is at least 0.40 and confidence is at least 0.60. An eager agent may propose a visit whenever the diagnosis is confident. The rule refuses that proposal when the class does not transfer, and the row shows both. A language model may rephrase the sentence for the installer. It cannot change the action.",
     outcome:
-      "The 99.6% headline was a label leak. The honest result is 89.3%, and only on a machine the model has already seen: the same classifier falls to 0.33 on a new one. A score therefore does not earn a visit. On real units, refrigerant charge is the only fault reliable enough to send a technician, so the queue dispatches on charge and holds every other fault for an engineer. Predicting when a healthy pump will fail stays out of the product. No public dataset runs from healthy to a dated failure.",
+      "The 99.6% headline was a label leak. The honest result is 89.3%, and only on held-out simulated runs: trained on the simulator and tested on 2,846 real NIST chamber tests, the same model scores 45.4%, against 28.1% for always guessing the most common class. A score therefore does not earn a visit. On real units, refrigerant charge is the only fault reliable enough to send a technician, so the queue dispatches on charge and holds every other fault for an engineer. Predicting when a healthy pump will fail stays out of the product. No public dataset runs from healthy to a dated failure.",
     gallery: [
+      {
+        id: "hp0",
+        caption: "89.3% on the simulator, 45.4% on real units — per fault, only refrigerant charge clears the 0.40 gate",
+        imageHref: "images/projects/heat-pump-fdd/gate.svg",
+      },
       {
         id: "hp1",
         caption: "The service queue — a visit goes out only for a fault that transferred on measured units",
@@ -92,7 +97,7 @@ export const projectDetails: ProjectDetail[] = [
       },
       {
         id: "hp2",
-        caption: "Same classifier — strong in a random split, 0.33 when the test machine is new",
+        caption: "Raw features — 0.95 in a random split, 0.33 when the test machine is new",
         imageHref: "images/projects/heat-pump-fdd/1.png",
       },
       {
@@ -118,6 +123,11 @@ export const projectDetails: ProjectDetail[] = [
     outcome:
       "At 10 m/s the power coefficient peaks near 0.55, at a tip-speed ratio of about 2, not at the value of 1 written in the brief. The shape of the curve matches the expected one: it rises, crests, and falls. Peak torque there is 0.016 N·m. At 13 m/s the coefficient does not improve, while the peak torque rises to 0.025 N·m. The shroud and the blade count were worth building; the target tip-speed ratio in the brief was not the operating point the rotor actually wants.",
     gallery: [
+      {
+        id: "sw0",
+        caption: "Built for a tip-speed ratio of 1, it peaks near 2 — measured power coefficient at 10 and 13 m/s",
+        imageHref: "images/projects/shrouded-wind-turbine/overview.svg",
+      },
       {
         id: "wt1",
         caption: "Seven-blade rotor, nose, and NACA diffuser, modeled in CATIA",
@@ -175,8 +185,12 @@ export const projectDetails: ProjectDetail[] = [
       "A Star-CCM+ model of the pack and the coolant, with temperature probes in the solid, at the interface, and in the outlet. The flow comparison is 0.8 kg/s against 1.2 kg/s. The geometry comparison opens the gap between cells from 2 mm to 4 mm, then the gap around the pack from 5 mm to 10 mm. The fluid comparison replaces SF10 with water–glycol, then with Novec 7200.",
     outcome:
       "Raising the flow from 0.8 to 1.2 kg/s drops the reported peak from 71°C to 58°C, and the residuals settle. A pump that can hold 1.2 kg/s is not the practical case: the report puts the realistic ceiling near 0.8 kg/s, where the solid probe is still climbing and the interface sits near 25°C. Opening the gap between cells from 2 mm to 4 mm gives the fluid a wider path and is the better of the two spacings we ran; a 3 mm case would still be worth checking. Opening the outer gap to 10 mm cools the pack, and the center and the edge can differ by about 8°C. The fluid decides more than the flow. Water–glycol, with a conductivity of 0.37 W/(m·K), levels the solid probe off near 42°C. Novec 7200, at 0.065 W/(m·K), is still climbing past 70°C. For an ordinary vehicle, water–glycol. Novec only if the fluid has to survive a much wider temperature range.",
-    cover: "images/projects/battery-cooling/4.png",
     gallery: [
+      {
+        id: "bc0",
+        caption: "One change at a time — flow, gaps, fluid. The fluid moves the cell temperature most",
+        imageHref: "images/projects/battery-cooling/overview.svg",
+      },
       {
         id: "bc1",
         caption: "The pack — heat sits in the cell core, and the channels stay near the inlet temperature",
@@ -224,10 +238,10 @@ export const projectDetails: ProjectDetail[] = [
     title: "Light-aircraft brake",
     subtitle: "A floating caliper sized to stop 685 kg from 53 m/s",
     year: "2023",
-    venue: "Group project · design dossier",
+    venue: "Design dossier",
     tags: ["CATIA", "Brakes", "Dimensioning", "Aircraft"],
     abstract:
-      "With Mohamed Youssef Gabsi and Nadine Mosengo, I sized a floating-caliper brake for a light aircraft. The tire and the rim were imposed, and the disc could not exceed 125 mm. The brake had to stop 685 kg from 53 m/s at 4 m/s² while both engines were still pushing.",
+      "I sized a floating-caliper brake for a light aircraft. The tire and the rim were imposed, and the disc could not exceed 125 mm. The brake had to stop 685 kg from 53 m/s at 4 m/s² while both engines were still pushing.",
     problem:
       "A fixed caliper puts a piston on each face of the disc. That is more mass, and a pad change means pulling the caliper off. A light aircraft wants the opposite: one piston, a body that slides, and pads that come off without grounding the airplane. The disc also has to absorb the heat of the stop without passing 450°C, inside a diameter the rim already limits.",
     approach:
@@ -235,6 +249,11 @@ export const projectDetails: ProjectDetail[] = [
     outcome:
       "A floating caliper is the brake this aircraft can carry. One piston loads one pad, and the slide puts the same force on the other face, so the disc is not bent by a one-sided clamp. The thickness of the disc is set by the heat of a single stop, not by stiffness. The bolt count clears the separation load with margin, and the two bearing fits separate the joint that must move from the joint that must not.",
     gallery: [
+      {
+        id: "lb0",
+        caption: "The heat of one stop sets the disc — 1.10 MJ, 5.74 kg of steel, 40 mm per disc",
+        imageHref: "images/projects/light-aircraft-brake/overview.svg",
+      },
       {
         id: "bk1",
         caption: "CAD of the wheel, hub, disc, and floating caliper",
@@ -285,6 +304,11 @@ export const projectDetails: ProjectDetail[] = [
     outcome:
       "On the tests, the typical efficiency error is about 0.002. That is an order of magnitude, not a promise at every point, and several of those tests repeat training conditions with rounded numbers. At 318 K, propane 0.5, and 2500 kW, the air–fuel ratio is about 116 against a measurement of 131, so Send stays off. Propane 0.75 is outside the 60 tests, and Send stays off there too. One random start never trained, with an error near 0.16. Those weights are not on the console.",
     gallery: [
+      {
+        id: "st0",
+        caption: "Send works only where the 60 tests reach, and stays off at the hot corner: 131.3 measured, 116.1 predicted",
+        imageHref: "images/projects/solar-gas-turbine/gate.svg",
+      },
       {
         id: "st1",
         caption: "At the reference setting, Send is on. Fuel for the same air matches 303 K, propane 0.25, 1500 kW",
