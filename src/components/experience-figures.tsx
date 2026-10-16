@@ -1,4 +1,5 @@
 import { GreenflexFigures } from "@/components/greenflex-figures"
+import { WavestoneFigures } from "@/components/wavestone-figures"
 
 /**
  * Optional charts for one experience page.
@@ -6,5 +7,6 @@ import { GreenflexFigures } from "@/components/greenflex-figures"
  */
 export function ExperienceFigures({ slug }: { slug: string }) {
   if (slug === "greenflex") return <GreenflexFigures />
+  if (slug === "wavestone") return <WavestoneFigures />
   return null
 }

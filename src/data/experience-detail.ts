@@ -73,26 +73,25 @@ export const experienceDetails: ExperienceDetail[] = [
     location: "Paris, France",
     duration: "February 2025 — January 2026",
     blurb:
-      "IoT platform on Azure Kubernetes for 6,000+ users. Pipelines over 3,000+ TB cut manual reporting by 90%. Dashboards for RTE on renewable grid connections.",
+      "A Python interface that cleans SharePoint across 3,000+ TB for 6,000+ users, cutting manual cleanup time by 90%. Excel and Power BI dashboards for RTE on renewable grid connections. An IoT proof of concept sized for Azure Kubernetes.",
     constraint:
-      "A dashboard that six thousand people trust has to read one number. The sources did not: thousands of terabytes, updated by hand, disagreeing with each other.",
+      "Three problems, one shape: data nobody could act on. Thousands of terabytes of SharePoint sorted by hand, renewable connections tracked region by region, and an IoT chain to stand up on containers because virtual machines were ruled out.",
     metrics: [
-      { value: "6,000+", label: "platform users" },
-      { value: "−90%", label: "reporting time" },
-      { value: "3,000+ TB", label: "consolidated" },
-      { value: "20 TB", label: "SharePoint pipeline" },
+      { value: "3,000+ TB", label: "SharePoint cleaned" },
+      { value: "6,000+", label: "users" },
+      { value: "−90%", label: "manual cleanup time" },
     ],
     owned: [
-      "Product vision and delivery of an IoT platform on Azure Kubernetes Service for 6,000+ users, including the KPIs the platform is judged on",
-      "Automated pipelines that consolidate 3,000+ TB into one source of truth and cut manual reporting time by 90%",
-      "A Python platform for SharePoint documents — modular, with JSON logging — processing and storing 20+ TB",
-      "Power BI and Excel dashboards for RTE on national renewable-energy grid connections, built so a stakeholder can decide from the figure",
+      "A Python interface for SharePoint cleanup, run locally, over 3,000+ TB for 6,000+ users — modular, with JSON logging — that cut manual cleanup time by 90%",
+      "Excel and Power BI dashboards for RTE's S3REnR programme, one per region, that give every grid investment a capacity in MW without a network study",
+      "An IoT proof of concept on LoRaWAN — ChirpStack, ThingsBoard and PostgreSQL in Docker — sized for Azure Kubernetes at 3 vCPU and 5 GB of RAM",
     ],
     description:
-      "The brief was an IoT platform people would actually open. I led the product vision and the build on Azure Kubernetes Service. It serves more than 6,000 users. The part that made it usable was the data underneath: queries and automated pipelines that pull 3,000+ terabytes of sources into one place. Manual reporting time dropped by 90%.\n\n" +
-      "Next to that, a Python platform for SharePoint document management. The design is modular and every run writes JSON logs, so a failure is a record rather than a missing file. It processes and stores more than 20 terabytes.\n\n" +
-      "For RTE, the French transmission operator, the same problem in another room: renewable grid connections are a national dataset, and the people who decide cannot read the raw extract. I shipped Power BI and Excel dashboards that carry the number they need.",
-    tags: ["Azure", "AKS", "Python", "Power BI", "IoT"],
+      "The largest of the three was a cleanup. SharePoint had grown past 3,000 terabytes for more than 6,000 users, and sorting it was manual work. I built a Python interface, run locally, that does that sorting. The design is modular and every run writes JSON logs, so a failure is a record rather than a missing file. Manual cleanup time dropped by 90%.\n\n" +
+      "For RTE, the French transmission operator, the S3REnR programme plans how renewables connect to the grid. I delivered one Excel and Power BI dashboard per region. The rule behind them gives every grid investment a capacity in megawatts from the region's reserved capacity, quasi-automatically and without a network study, so a regional pilot can answer a national request from the figure.\n\n" +
+      "The third was an IoT proof of concept on LoRaWAN: ChirpStack as the network server, ThingsBoard for devices and dashboards, PostgreSQL underneath, all in Docker because virtual machines were ruled out. I sized it for Azure Kubernetes: 10 sensors at one message every 30 minutes, about 1.5 GB a year, 3 vCPU and 5 GB of RAM.",
+    tags: ["Python", "SharePoint", "Power BI", "IoT", "AKS"],
+    cover: "images/experience/wavestone/overview.svg",
     gallery: [],
   },
   {
