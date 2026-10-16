@@ -22,9 +22,9 @@ export const site = {
   },
   email: "adnan_ahali@berkeley.edu",
   github: "https://github.com/Adnandbss",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/adnan-ahali-b58249237/",
   /** Filename under `public/`, for example `resume.pdf`. Leave empty until the file is there. */
-  resume: "",
+  resume: "resume-adnan-ahali.pdf",
   posterCredit: "Adnan Ahali · UC Berkeley · Arts et Métiers",
   description:
     "Adnan Ahali — product manager trained as an engineer. Product, data, energy, ML. 1st place at B@BHacks 2.0. UC Berkeley, Arts et Métiers.",
