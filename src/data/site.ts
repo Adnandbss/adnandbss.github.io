@@ -6,6 +6,13 @@ export const site = {
   schools: "UC Berkeley · Arts et Métiers",
   /** Shown next to "Focus" in the header. */
   specializations: "Product · Data · Energy · ML",
+  /** Header row after Focus. Fill `experienceSlug` to link the role to its page. */
+  now: {
+    role: "M.Eng. student",
+    org: "UC Berkeley",
+    proof: "Looking for Product Manager roles",
+    experienceSlug: "",
+  },
   /** Header row; each links to its project's poster page. */
   awards: [
     { label: "1st place · Most Creative · B@BHacks 2.0", projectSlug: "geste" },

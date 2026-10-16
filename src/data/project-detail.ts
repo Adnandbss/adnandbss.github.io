@@ -108,6 +108,46 @@ export const projectDetails: ProjectDetail[] = [
     ],
   },
   {
+    slug: "solar-gas-turbine",
+    title: "Solar turbine fuel setting",
+    subtitle: "A console that estimates the fuel flow, and refuses to open the valve outside the tests",
+    year: "2026",
+    venue: "Course project · UC Berkeley ME249",
+    tags: ["Fuel control", "Turbines", "Evaluation"],
+    paperHref: "papers/solar-gas-turbine.pdf",
+    dashboardHref: "/solar-gas-turbine/index.html",
+    abstract:
+      "A control-room operator, not yet interviewed, would change the fuel flow when inlet air, solar heat, or the propane fraction moves, so the turbine inlet stays at 1473 K. I trained a small network on 60 operating tests and put a gate on the console. The screen shows the change from a reference setting. Send is active only inside the tests and away from one bad corner. Outside the tests, and at that corner, the button stays off and the log records a refusal.",
+    problem:
+      "More solar heat means less fuel for the same turbine temperature, and a warmer inlet changes both the compressor work and the fuel the burner still has to add. A wrong air–fuel ratio at the burner either leaves the turbine short of 1473 K or burns fuel the solar heat had already replaced. At the hot corner the model is about 15 points low, which would tell the operator to inject more fuel than the test required.",
+    approach:
+      "The reference setting is 303 K, propane fraction 0.25, and 1500 kW. Each move shows the new air–fuel ratio, the new efficiency, and the relative change in fuel for the same air. Send records that decision on the page. It does not move a valve in a plant. The model is the one in the course report.",
+    outcome:
+      "On the tests, the typical efficiency error is about 0.002. That is an order of magnitude, not a promise at every point, and several of those tests repeat training conditions with rounded numbers. At 318 K, propane 0.5, and 2500 kW, the air–fuel ratio is about 116 against a measurement of 131, so Send stays off. Propane 0.75 is outside the 60 tests, and Send stays off there too. One random start never trained, with an error near 0.16. Those weights are not on the console.",
+    gallery: [
+      {
+        id: "st0",
+        caption: "Send works only where the 60 tests reach, and stays off at the hot corner: 131.3 measured, 116.1 predicted",
+        imageHref: "images/projects/solar-gas-turbine/gate.svg",
+      },
+      {
+        id: "st1",
+        caption: "At the reference setting, Send is on. Fuel for the same air matches 303 K, propane 0.25, 1500 kW",
+        imageHref: "images/projects/solar-gas-turbine/1.png",
+      },
+      {
+        id: "st2",
+        caption: "At 318 K, propane 0.5 and 2500 kW, Send stays off: 116.1 against a measurement of 131.3",
+        imageHref: "images/projects/solar-gas-turbine/2.png",
+      },
+      {
+        id: "st3",
+        caption: "The marked point is the one that blocks the valve. Several other rows repeat training conditions, only rounded",
+        imageHref: "images/projects/solar-gas-turbine/3.png",
+      },
+    ],
+  },
+  {
     slug: "shrouded-wind-turbine",
     title: "Shrouded wind turbine",
     subtitle: "A diffuser-augmented micro rotor, printed and measured in a wind tunnel",
@@ -283,46 +323,6 @@ export const projectDetails: ProjectDetail[] = [
         id: "bk6",
         caption: "Bearing fits — H7/g6 where the shaft must slide, H7/p6 where it must not",
         imageHref: "images/projects/light-aircraft-brake/6.png",
-      },
-    ],
-  },
-  {
-    slug: "solar-gas-turbine",
-    title: "Solar turbine fuel setting",
-    subtitle: "A console that estimates the fuel flow, and refuses to open the valve outside the tests",
-    year: "2026",
-    venue: "Course project · UC Berkeley ME249",
-    tags: ["Fuel control", "Turbines", "Evaluation"],
-    paperHref: "papers/solar-gas-turbine.pdf",
-    dashboardHref: "/solar-gas-turbine/index.html",
-    abstract:
-      "A control-room operator, not yet interviewed, would change the fuel flow when inlet air, solar heat, or the propane fraction moves, so the turbine inlet stays at 1473 K. I trained a small network on 60 operating tests and put a gate on the console. The screen shows the change from a reference setting. Send is active only inside the tests and away from one bad corner. Outside the tests, and at that corner, the button stays off and the log records a refusal.",
-    problem:
-      "More solar heat means less fuel for the same turbine temperature, and a warmer inlet changes both the compressor work and the fuel the burner still has to add. A wrong air–fuel ratio at the burner either leaves the turbine short of 1473 K or burns fuel the solar heat had already replaced. At the hot corner the model is about 15 points low, which would tell the operator to inject more fuel than the test required.",
-    approach:
-      "The reference setting is 303 K, propane fraction 0.25, and 1500 kW. Each move shows the new air–fuel ratio, the new efficiency, and the relative change in fuel for the same air. Send records that decision on the page. It does not move a valve in a plant. The model is the one in the course report.",
-    outcome:
-      "On the tests, the typical efficiency error is about 0.002. That is an order of magnitude, not a promise at every point, and several of those tests repeat training conditions with rounded numbers. At 318 K, propane 0.5, and 2500 kW, the air–fuel ratio is about 116 against a measurement of 131, so Send stays off. Propane 0.75 is outside the 60 tests, and Send stays off there too. One random start never trained, with an error near 0.16. Those weights are not on the console.",
-    gallery: [
-      {
-        id: "st0",
-        caption: "Send works only where the 60 tests reach, and stays off at the hot corner: 131.3 measured, 116.1 predicted",
-        imageHref: "images/projects/solar-gas-turbine/gate.svg",
-      },
-      {
-        id: "st1",
-        caption: "At the reference setting, Send is on. Fuel for the same air matches 303 K, propane 0.25, 1500 kW",
-        imageHref: "images/projects/solar-gas-turbine/1.png",
-      },
-      {
-        id: "st2",
-        caption: "At 318 K, propane 0.5 and 2500 kW, Send stays off: 116.1 against a measurement of 131.3",
-        imageHref: "images/projects/solar-gas-turbine/2.png",
-      },
-      {
-        id: "st3",
-        caption: "The marked point is the one that blocks the valve. Several other rows repeat training conditions, only rounded",
-        imageHref: "images/projects/solar-gas-turbine/3.png",
       },
     ],
   },
