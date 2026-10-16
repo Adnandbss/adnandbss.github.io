@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">
 <title id="t">Greenflex energy dashboard — built solo as an intern, sold on every mission</title>
-<desc id="d">A Power BI and VBA dashboard for gas and electricity, built solo during an internship at Greenflex from September 2024 to February 2025. It was first sold on a pharmaceutical consulting mission and has since been sold as a paid deliverable on every ISO 50001 engagement. An Excel workbook and a VBA macro compute a modelled reference from regression equations on the influencing factors; Power BI compares real consumption with that reference, inside an error band, from the site down to each significant energy use such as boilers and HVAC, and checks each factor, as with cooling degree-days against HVAC gas at a correlation of 93.8%. The anomalies it flagged led to a 22% cut in energy use, and the decarbonization roadmaps built on it project a 45% cut in greenhouse-gas emissions. The small drawings of the four steps are pictograms, not data.</desc>
+<desc id="d">A Power BI and VBA dashboard for gas and electricity, built solo during an internship at Greenflex from September 2024 to February 2025. It was first sold on a pharmaceutical consulting mission and has since been sold as a paid deliverable on every ISO 50001 engagement: 10 missions in 2025 and 17 so far in 2026. An Excel workbook and a VBA macro compute a modelled reference from regression equations on the influencing factors; Power BI compares real consumption with that reference, inside an error band, from the site down to each significant energy use such as boilers and HVAC, and checks each factor, as with cooling degree-days against HVAC gas at a correlation of 93.8%. The anomalies it flagged led to a 22% cut in energy use, and the decarbonization roadmaps built on it project a 45% cut in greenhouse-gas emissions. The small drawings of the four steps are pictograms, not data.</desc>
 <defs>
   <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#7A766E"/></marker>
   <marker id="go" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#2A78D6"/></marker>
@@ -28,7 +28,7 @@
 <g font-size="14" fill="#4A4740">
   <text x="90" y="318">Sep 2024 – Feb 2025</text>
   <text x="450" y="318">a pharmaceutical client</text>
-  <text x="820" y="318">paid, in every ISO 50001 engagement</text>
+  <text x="820" y="318">10 in 2025 · 17 so far in 2026</text>
 </g>
 
 <!-- the product, in four steps (pictograms) -->
@@ -80,6 +80,6 @@
 <text x="56" y="556" font-size="14" fill="#4A4740">energy use, from the anomalies it flagged</text>
 <text x="476" y="532" font-size="40" font-weight="700" fill="#141414">−45%</text>
 <text x="476" y="556" font-size="14" fill="#4A4740">GHG, projected in the roadmaps</text>
-<text x="820" y="532" font-size="40" font-weight="700" fill="#141414">ISO 50001</text>
-<text x="820" y="556" font-size="14" fill="#4A4740">the standard every mission runs to</text>
+<text x="820" y="532" font-size="40" font-weight="700" fill="#141414">10 → 17</text>
+<text x="820" y="556" font-size="14" fill="#4A4740">paid missions, 2025 → 2026 so far</text>
 </svg>

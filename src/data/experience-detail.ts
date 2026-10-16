@@ -101,22 +101,23 @@ export const experienceDetails: ExperienceDetail[] = [
     location: "Paris, France",
     duration: "September 2024 — February 2025",
     blurb:
-      "Built solo as an intern: a Power BI and VBA dashboard for gas and electricity, first sold on a pharmaceutical mission, now sold as a service on every ISO 50001 engagement. Roadmaps projecting a 45% cut in GHG.",
+      "Built solo as an intern: a Power BI and VBA dashboard for gas and electricity, first sold on a pharmaceutical mission, now sold as a service on every ISO 50001 engagement: 10 missions in 2025, 17 so far in 2026. Roadmaps projecting a 45% cut in GHG.",
     constraint:
       "A reduction target is a sentence until the meters say where the energy goes. The dashboard had to be good enough to sell on its own, then good enough to carry the next mission.",
     metrics: [
-      { value: "−45%", label: "GHG projected" },
+      { value: "10 → 17", label: "paid missions, 2025 → 2026" },
       { value: "−22%", label: "energy use" },
+      { value: "−45%", label: "GHG projected" },
       { value: "ISO 50001", label: "energy tracking" },
     ],
     owned: [
-      "A gas and electricity dashboard in Power BI and VBA, built solo during the internship: consumption tracking and a forecast. First sold on a pharmaceutical consulting mission, then sold as a service on every ISO 50001 engagement",
+      "A gas and electricity dashboard in Power BI and VBA, built solo during the internship: consumption tracking and a forecast. First sold on a pharmaceutical consulting mission, then sold as a service on every ISO 50001 engagement: 10 missions in 2025, 17 so far in 2026",
       "Decarbonization roadmaps for pharmaceutical and automotive clients, with a projected 45% reduction in greenhouse-gas emissions",
       "ISO 50001 energy tracking on top of that dashboard. The anomalies it flagged led to a 22% reduction in energy consumption",
     ],
     description:
       "The first deliverable was a product, not a slide. As an intern, working alone on it, I built a dashboard that tracks and forecasts gas and electricity consumption, in Power BI and VBA. The brief was to sell it on a consulting mission for a pharmaceutical client. It sold.\n\n" +
-      "After that it stopped being a one-off. Every later mission on ISO 50001 used the same dashboard: site level, then the equipment underneath (boilers, HVAC), then the drivers of the load, then a forecast against the reference. The client was buying the tool along with the mission, and it has been sold that way on every ISO 50001 mission since.\n\n" +
+      "After that it stopped being a one-off. Every later mission on ISO 50001 used the same dashboard: site level, then the equipment underneath (boilers, HVAC), then the drivers of the load, then a forecast against the reference. The client was buying the tool along with the mission, and it has been sold that way on every ISO 50001 mission since: 10 missions in 2025, 17 so far in 2026.\n\n" +
       "The roadmaps sat on top of that trace. For pharmaceutical and automotive sites I projected a 45% reduction in greenhouse-gas emissions. The tracking, run to ISO 50001, is what made the number operational: the anomalies it surfaced led to a 22% drop in energy consumption.",
     tags: ["Power BI", "VBA", "ISO 50001", "Forecasting", "Energy"],
     cover: "images/experience/greenflex/overview.svg",
