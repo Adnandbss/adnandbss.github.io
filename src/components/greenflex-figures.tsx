@@ -1,6 +1,6 @@
-import { resolveProjectAssetHref } from "@/data/project-detail"
+import { ExperienceShots, type ExperienceShot } from "@/components/experience-shots"
 
-const shots = [
+const shots: ExperienceShot[] = [
   {
     src: "images/experience/greenflex/overview.svg",
     caption: "Built as an intern, then sold as a paid deliverable on every ISO 50001 mission since",
@@ -34,24 +34,5 @@ const shots = [
 ]
 
 export function GreenflexFigures() {
-  return (
-    <div className="mb-10">
-      <h3 className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-foreground/45">
-        <span className="text-foreground/25">{">"}</span> Dashboard
-      </h3>
-      {shots.map((shot) => (
-        <figure key={shot.src} className="mb-8">
-          <img
-            src={resolveProjectAssetHref(shot.src)}
-            alt={shot.caption}
-            width={shot.width}
-            height={shot.height}
-            className="block h-auto w-full border border-border bg-background"
-            draggable={false}
-          />
-          <figcaption className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">{shot.caption}</figcaption>
-        </figure>
-      ))}
-    </div>
-  )
+  return <ExperienceShots title="Dashboard" shots={shots} />
 }

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">
+<title id="t">Wavestone — 3,000+ TB of SharePoint cleaned for 6,000 users, RTE dashboards, an IoT proof of concept</title>
+<desc id="d">Technical Product Manager at Wavestone, three projects. First, a Python interface run locally that cleans SharePoint across more than 3,000 TB for more than 6,000 users, cutting manual cleanup time by 90%. Second, for RTE's S3REnR programme, one Excel and Power BI dashboard per region that gives every grid investment a capacity in megawatts without a network study; in Pays de la Loire zone 3, a reserved 220 MW minus 30, 38, 43 and 47 MW already accounted for leaves 62 MW, about 15 MW for each of 4 reinforcements. Third, an IoT proof of concept on LoRaWAN with ChirpStack, ThingsBoard and PostgreSQL in Docker, sized for Azure Kubernetes at 3 vCPU and 5 GB of RAM for 10 sensors sending one message every 30 minutes, about 1.5 GB of data a year.</desc>
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#7A766E"/></marker>
+</defs>
+<rect width="1200" height="620" fill="#F5F3EE"/>
+
+<!-- headline -->
+<text x="56" y="64" font-size="14" letter-spacing=".2em" fill="#7A766E">WAVESTONE · TECHNICAL PRODUCT MANAGER</text>
+<text x="56" y="114" font-size="40" font-weight="700" fill="#141414">3,000+ TB cleaned for 6,000 users.</text>
+<text x="56" y="154" font-size="19" fill="#4A4740">A Python interface for SharePoint cleanup, then two more: dashboards that</text>
+<text x="56" y="180" font-size="19" fill="#4A4740">size every RTE grid project in MW, and an IoT proof of concept sized for AKS.</text>
+
+<line x1="396" y1="222" x2="396" y2="562" stroke="#E1E0D9" stroke-width="1"/>
+<line x1="776" y1="222" x2="776" y2="562" stroke="#E1E0D9" stroke-width="1"/>
+
+<!-- 01: SharePoint cleanup -->
+<text x="56" y="236" font-size="13" letter-spacing=".2em" fill="#7A766E">01 · SHAREPOINT CLEANUP</text>
+<text x="56" y="296" font-size="40" font-weight="700" fill="#141414">3,000+ TB</text>
+<text x="56" y="318" font-size="14" fill="#4A4740">of SharePoint</text>
+<text x="56" y="378" font-size="40" font-weight="700" fill="#141414">6,000+</text>
+<text x="56" y="400" font-size="14" fill="#4A4740">users</text>
+<text x="56" y="460" font-size="40" font-weight="700" fill="#141414">−90%</text>
+<text x="56" y="482" font-size="14" fill="#4A4740">manual cleanup time</text>
+<text x="56" y="526" font-size="13" fill="#7A766E">Python interface, run locally</text>
+<text x="56" y="546" font-size="13" fill="#7A766E">modular, every run logged in JSON</text>
+
+<!-- 02: RTE dashboards, worked example -->
+<text x="420" y="236" font-size="13" letter-spacing=".2em" fill="#7A766E">02 · RTE DASHBOARDS (MW)</text>
+<line x1="424" y1="480" x2="760" y2="480" stroke="#C3C2B7" stroke-width="1"/>
+<rect x="430" y="300" width="34" height="180" fill="#141414"/>
+<g fill="#B9B7AE">
+  <rect x="478" y="300" width="34" height="24.5"/>
+  <rect x="526" y="324.5" width="34" height="31.1"/>
+  <rect x="574" y="355.6" width="34" height="35.2"/>
+  <rect x="622" y="390.8" width="34" height="38.5"/>
+</g>
+<g stroke="#898781" stroke-width="1" stroke-dasharray="3 3">
+  <line x1="464" y1="300" x2="478" y2="300"/><line x1="512" y1="324.5" x2="526" y2="324.5"/><line x1="560" y1="355.6" x2="574" y2="355.6"/><line x1="608" y1="390.8" x2="622" y2="390.8"/><line x1="656" y1="429.3" x2="670" y2="429.3"/>
+</g>
+<path d="M670 433.3 Q670 429.3 674 429.3 H700 Q704 429.3 704 433.3 V480 H670 Z" fill="#2A78D6"/>
+<g fill="#2A78D6" fill-opacity=".55">
+  <rect x="718" y="467.7" width="7" height="12.3"/><rect x="727" y="467.7" width="7" height="12.3"/><rect x="736" y="467.7" width="7" height="12.3"/><rect x="745" y="467.7" width="7" height="12.3"/>
+</g>
+<g font-size="13" fill="#141414" text-anchor="middle">
+  <text x="447" y="292" font-weight="700">220</text>
+  <text x="495" y="292">−30</text><text x="543" y="317">−38</text><text x="591" y="348">−43</text><text x="639" y="383">−47</text>
+  <text x="687" y="421" font-weight="700">62</text>
+  <text x="735" y="460">15×4</text>
+</g>
+<g font-size="12" fill="#4A4740" text-anchor="middle">
+  <text x="447" y="498">reserved</text><text x="567" y="498">already counted</text><text x="687" y="498">left</text><text x="735" y="498">each</text>
+</g>
+<text x="420" y="526" font-size="13" fill="#7A766E">Pays de la Loire, zone 3</text>
+<text x="420" y="546" font-size="13" fill="#7A766E">one per region, no network study</text>
+
+<!-- 03: IoT proof of concept -->
+<text x="800" y="236" font-size="13" letter-spacing=".2em" fill="#7A766E">03 · IoT PROOF OF CONCEPT</text>
+<g fill="#FFFFFF" stroke="#C3C2B7" stroke-width="1">
+  <rect x="800" y="252" width="344" height="26"/><rect x="800" y="288" width="344" height="26"/><rect x="800" y="324" width="344" height="26"/><rect x="800" y="360" width="344" height="26"/>
+</g>
+<rect x="800" y="324" width="344" height="26" fill="#2A78D6" fill-opacity=".12" stroke="#2A78D6" stroke-width="1"/>
+<g stroke="#7A766E" stroke-width="1.5" marker-end="url(#ar)">
+  <line x1="972" y1="278" x2="972" y2="286"/><line x1="972" y1="314" x2="972" y2="322"/><line x1="972" y1="350" x2="972" y2="358"/>
+</g>
+<g font-size="13" fill="#141414">
+  <text x="812" y="270">10 sensors · LoRaWAN gateway</text>
+  <text x="812" y="306">ChirpStack · network server</text>
+  <text x="812" y="342" font-weight="700">ThingsBoard · dashboards</text>
+  <text x="812" y="378">PostgreSQL · time series</text>
+</g>
+<text x="800" y="444" font-size="26" font-weight="700" fill="#141414">3 vCPU · 5 GB</text>
+<text x="800" y="466" font-size="14" fill="#4A4740">sized for AKS, Docker only</text>
+<text x="800" y="512" font-size="26" font-weight="700" fill="#141414">1.5 GB/yr</text>
+<text x="800" y="534" font-size="14" fill="#4A4740">one message / 30 min / sensor</text>
+</svg>
