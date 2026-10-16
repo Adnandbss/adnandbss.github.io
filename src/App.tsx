@@ -267,6 +267,7 @@ function App() {
                       posterHref={project.posterHref}
                       repoHref={project.repoHref}
                       dashboardHref={project.dashboardHref}
+                      liveHref={project.liveHref}
                     />
                     <p>
                       <a
