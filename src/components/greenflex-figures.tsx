@@ -3,7 +3,7 @@ import { ExperienceShots, type ExperienceShot } from "@/components/experience-sh
 const shots: ExperienceShot[] = [
   {
     src: "images/experience/greenflex/overview.svg",
-    caption: "Built as an intern, then sold as a paid deliverable on every ISO 50001 mission since",
+    caption: "Built solo as an intern, then sold as a paid deliverable on every ISO 50001 mission since: 10 missions in 2025, 17 so far in 2026",
     width: 1200,
     height: 620,
   },
