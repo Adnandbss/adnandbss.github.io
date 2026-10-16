@@ -26,6 +26,8 @@ export type ProjectDetail = {
   repoHref?: string
   /** Optional page, shown as one text link under the poster credit. */
   dashboardHref?: string
+  /** Hosted app, opened in a new tab as "Live demo". */
+  liveHref?: string
   abstract: string
   problem: string
   approach: string
@@ -76,6 +78,7 @@ export const projectDetails: ProjectDetail[] = [
     venue: "Personal product project",
     tags: ["FastAPI", "React", "scikit-learn", "Evaluation"],
     repoHref: "https://github.com/Adnandbss/heat-pump-fdd",
+    liveHref: "https://heat-pump-fdd.onrender.com",
     abstract:
       "After-sales at a heat-pump manufacturer already sees connected units, and installer tools already raise fault codes. The morning decision is narrower: which units deserve a visit today, and what should the installer be told. I built the classifier, logged every result against its protocol, and put a gate in front of the queue so a diagnosis becomes a dispatch only when that fault has transferred to measured units.",
     problem:

@@ -25,6 +25,7 @@ type Props = {
   posterHref?: string
   repoHref?: string
   dashboardHref?: string
+  liveHref?: string
   className?: string
   buttonSize?: "default" | "sm" | "xs"
 }
@@ -34,6 +35,7 @@ export function ProjectDownloadLinks({
   posterHref,
   repoHref,
   dashboardHref,
+  liveHref,
   className,
   buttonSize = "sm",
 }: Props) {
@@ -41,9 +43,19 @@ export function ProjectDownloadLinks({
   const poster = posterHref && hrefPointsToAvailableAsset(posterHref) ? posterHref : undefined
   const repo = repoHref?.trim() ? repoHref.trim() : undefined
   const dashboard = dashboardHref?.trim() ? dashboardHref.trim() : undefined
-  if (!paper && !poster && !repo && !dashboard) return null
+  const live = liveHref?.trim() ? liveHref.trim() : undefined
+  if (!paper && !poster && !repo && !dashboard && !live) return null
   return (
     <div className={cn("flex flex-wrap gap-2", className)}>
+      {live ? (
+        <Button
+          size={buttonSize}
+          className="rounded-none"
+          render={<a href={live} target="_blank" rel="noopener noreferrer" />}
+        >
+          Live demo
+        </Button>
+      ) : null}
       {dashboard ? (
         <Button
           size={buttonSize}

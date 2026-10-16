@@ -128,6 +128,7 @@ export default function ProjectPosterPage({ slug }: Props) {
                 posterHref={project.posterHref}
                 repoHref={project.repoHref}
                 dashboardHref={project.dashboardHref}
+                liveHref={project.liveHref}
                 className="mt-8 justify-center"
                 buttonSize="default"
               />
