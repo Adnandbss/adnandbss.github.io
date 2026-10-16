@@ -14,10 +14,10 @@ const shots: ExperienceShot[] = [
     height: 752,
   },
   {
-    src: "images/experience/wavestone/iot-architecture.jpg",
-    caption: "IoT proof of concept — ThingsBoard and ChirpStack, each on its own PostgreSQL, linked over MQTT, with Mosquitto, Redis and the gateway bridge, all in Docker",
-    width: 863,
-    height: 717,
+    src: "images/experience/wavestone/iot-architecture.svg",
+    caption: "IoT proof of concept, local Docker environment — the ChirpStack stack sends data over HTTP to ThingsBoard CE, with every service and its port",
+    width: 1200,
+    height: 620,
   },
 ]
 

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">
+<title id="t">IoT proof of concept — architecture of the local Docker environment</title>
+<desc id="d">A local Docker environment with two stacks. The ChirpStack stack holds ChirpStack, the LoRaWAN network server, on port 8082; the Mosquitto MQTT broker on port 1884, linked to ChirpStack over MQTT; Redis on port 6379; the gateway bridge on UDP port 1700; the ChirpStack REST API on port 8090; and PostgreSQL on port 5432. It sends data over HTTP to the ThingsBoard stack on port 8080. The ThingsBoard stack runs ThingsBoard Community Edition with its web UI on port 8080, MQTT on port 1883, its REST API on port 8080, and an embedded PostgreSQL.</desc>
+<defs>
+  <marker id="go" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#2A78D6"/></marker>
+</defs>
+<rect width="1200" height="620" fill="#F5F3EE"/>
+
+<!-- headline -->
+<text x="40" y="56" font-size="14" letter-spacing=".2em" fill="#7A766E">IoT PROOF OF CONCEPT · LOCAL DOCKER ENVIRONMENT</text>
+<text x="40" y="100" font-size="30" font-weight="700" fill="#141414">Two stacks, one HTTP link.</text>
+<text x="40" y="132" font-size="16" fill="#4A4740">ChirpStack runs the LoRaWAN network; ThingsBoard stores and shows the data.</text>
+
+<!-- docker environment -->
+<rect x="40" y="160" width="1120" height="416" fill="none" stroke="#141414" stroke-width="1.2"/>
+<text x="56" y="182" font-size="12" letter-spacing=".2em" fill="#7A766E">DOCKER · LOCAL</text>
+
+<!-- ChirpStack stack -->
+<rect x="64" y="196" width="556" height="356" fill="#FFFFFF" fill-opacity=".55" stroke="#C3C2B7" stroke-width="1"/>
+<text x="82" y="222" font-size="12" letter-spacing=".2em" fill="#4A4740">CHIRPSTACK STACK</text>
+<g fill="#FFFFFF" stroke="#C3C2B7" stroke-width="1">
+  <rect x="262" y="240" width="160" height="84"/><rect x="440" y="240" width="160" height="84"/>
+  <rect x="84" y="428" width="160" height="84"/><rect x="262" y="428" width="160" height="84"/><rect x="440" y="428" width="160" height="84"/>
+</g>
+<rect x="84" y="240" width="160" height="84" fill="#2A78D6" fill-opacity=".10" stroke="#2A78D6" stroke-width="1.5"/>
+<path d="M164 324 V362 H342 V324" fill="none" stroke="#7A766E" stroke-width="1.5"/>
+<text x="253" y="382" font-size="13" fill="#4A4740" text-anchor="middle">MQTT</text>
+
+<!-- ThingsBoard stack -->
+<rect x="700" y="196" width="436" height="356" fill="#FFFFFF" fill-opacity=".55" stroke="#C3C2B7" stroke-width="1"/>
+<text x="718" y="222" font-size="12" letter-spacing=".2em" fill="#4A4740">THINGSBOARD STACK</text>
+<rect x="720" y="236" width="396" height="296" fill="#2A78D6" fill-opacity=".06" stroke="#2A78D6" stroke-width="1.5"/>
+<text x="736" y="262" font-size="14" font-weight="700" fill="#141414">ThingsBoard CE</text>
+<g fill="#FFFFFF" stroke="#C3C2B7" stroke-width="1">
+  <rect x="736" y="280" width="116" height="84"/><rect x="864" y="280" width="116" height="84"/><rect x="992" y="280" width="116" height="84"/>
+  <rect x="736" y="428" width="372" height="84"/>
+</g>
+
+<!-- the link -->
+<line x1="620" y1="322" x2="696" y2="322" stroke="#2A78D6" stroke-width="2" marker-end="url(#go)"/>
+<text x="660" y="310" font-size="12" fill="#141414" text-anchor="middle">HTTP API</text>
+<text x="660" y="342" font-size="12" fill="#141414" text-anchor="middle">:8080</text>
+
+<!-- card text: name, role, port -->
+<g font-size="16" font-weight="700" fill="#141414">
+  <text x="98" y="268">ChirpStack</text><text x="276" y="268">Mosquitto</text><text x="454" y="268">Redis</text>
+  <text x="98" y="456">Gateway Bridge</text><text x="276" y="456">REST API</text><text x="454" y="456">PostgreSQL</text>
+  <text x="750" y="308">Web UI</text><text x="878" y="308">MQTT</text><text x="1006" y="308">REST API</text>
+  <text x="750" y="456">PostgreSQL</text>
+</g>
+<g font-size="12" fill="#7A766E">
+  <text x="98" y="288">network server</text><text x="276" y="288">MQTT broker</text><text x="454" y="288">cache</text>
+  <text x="98" y="476">gateway input</text><text x="276" y="476">ChirpStack API</text><text x="454" y="476">ChirpStack data</text>
+  <text x="750" y="328">dashboards</text><text x="878" y="328">telemetry</text><text x="1006" y="328">data API</text>
+  <text x="750" y="476">embedded in ThingsBoard</text>
+</g>
+<g fill="#F5F3EE" stroke="#C3C2B7" stroke-width="1">
+  <rect x="98" y="298" width="52" height="18"/><rect x="276" y="298" width="52" height="18"/><rect x="454" y="298" width="52" height="18"/>
+  <rect x="98" y="486" width="84" height="18"/><rect x="276" y="486" width="52" height="18"/><rect x="454" y="486" width="52" height="18"/>
+  <rect x="750" y="338" width="52" height="18"/><rect x="878" y="338" width="52" height="18"/><rect x="1006" y="338" width="52" height="18"/>
+</g>
+<g font-size="12" fill="#141414">
+  <text x="104" y="311">:8082</text><text x="282" y="311">:1884</text><text x="460" y="311">:6379</text>
+  <text x="104" y="499">:1700/UDP</text><text x="282" y="499">:8090</text><text x="460" y="499">:5432</text>
+  <text x="756" y="351">:8080</text><text x="884" y="351">:1883</text><text x="1012" y="351">:8080</text>
+</g>
+</svg>
