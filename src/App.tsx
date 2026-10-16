@@ -73,7 +73,7 @@ function App() {
             </div>
             <ResumeChip className="mt-1.5" />
           </div>
-          {site.schools || site.specializations || site.awards.length > 0 ? (
+          {site.schools || site.specializations || site.now.role || site.awards.length > 0 ? (
             <dl className="mt-4 grid grid-cols-[5.5rem_1fr] items-baseline gap-x-3 gap-y-1.5 text-sm">
               {site.schools ? (
                 <>
@@ -89,6 +89,32 @@ function App() {
                     Focus
                   </dt>
                   <dd className="text-pretty text-muted-foreground">{site.specializations}</dd>
+                </>
+              ) : null}
+              {site.now.role ? (
+                <>
+                  <dt className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-foreground/40">
+                    Now
+                  </dt>
+                  <dd>
+                    {site.now.experienceSlug ? (
+                      <a
+                        href={`${import.meta.env.BASE_URL}experience/${site.now.experienceSlug}/`}
+                        className="text-foreground no-underline underline-offset-4 hover:underline"
+                      >
+                        <span className="font-semibold">{site.now.role}</span>
+                        <span className="text-muted-foreground"> @ {site.now.org}</span>
+                      </a>
+                    ) : (
+                      <span className="text-foreground">
+                        <span className="font-semibold">{site.now.role}</span>
+                        <span className="text-muted-foreground"> @ {site.now.org}</span>
+                      </span>
+                    )}
+                    {site.now.proof ? (
+                      <span className="mt-0.5 block font-mono text-[11px] text-foreground/70">{site.now.proof}</span>
+                    ) : null}
+                  </dd>
                 </>
               ) : null}
               {site.awards.length > 0 ? (

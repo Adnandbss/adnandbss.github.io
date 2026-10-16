@@ -5,8 +5,8 @@
 export const PROJECT_POSTER_BUILD_SLUGS: readonly string[] = [
   "geste",
   "heat-pump-fdd",
+  "solar-gas-turbine",
   "shrouded-wind-turbine",
   "battery-cooling",
   "light-aircraft-brake",
-  "solar-gas-turbine",
 ]
