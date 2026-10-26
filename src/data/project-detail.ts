@@ -158,6 +158,7 @@ export const projectDetails: ProjectDetail[] = [
     venue: "Course project · UC Berkeley ME249",
     tags: ["Genetic algorithm", "Boiling", "Heat pipes", "Evaluation"],
     paperHref: "papers/microgravity-boiling.pdf",
+    repoHref: "https://github.com/Adnandbss/microgravity-boiling",
     abstract:
       "NASA flew a water/2-propanol mixture on its parabolic-flight aircraft and measured nucleate boiling from 0.01 g to 2 g. I fitted heat-flux laws to those 77 points with a genetic algorithm, then used the same algorithm to calibrate a heat-pipe exchanger that cools an electronics cabinet. I did the project alone, including the two extra tasks meant for teams of three: about 300 runs, each seeded so it can be replayed, and every best fit checked against a deterministic minimum of the same error.",
     problem:
