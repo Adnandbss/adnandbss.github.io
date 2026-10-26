@@ -151,6 +151,65 @@ export const projectDetails: ProjectDetail[] = [
     ],
   },
   {
+    slug: "microgravity-boiling",
+    title: "Microgravity boiling",
+    subtitle: "Why a water/2-propanol mixture boils as well at 0.01 g as at 1 g, found with a genetic algorithm",
+    year: "2026",
+    venue: "Course project · UC Berkeley ME249",
+    tags: ["Genetic algorithm", "Boiling", "Heat pipes", "Evaluation"],
+    paperHref: "papers/microgravity-boiling.pdf",
+    abstract:
+      "NASA flew a water/2-propanol mixture on its parabolic-flight aircraft and measured nucleate boiling from 0.01 g to 2 g. I fitted heat-flux laws to those 77 points with a genetic algorithm, then used the same algorithm to calibrate a heat-pipe exchanger that cools an electronics cabinet. I did the project alone, including the two extra tasks meant for teams of three: about 300 runs, each seeded so it can be replayed, and every best fit checked against a deterministic minimum of the same error.",
+    problem:
+      "In orbit, buoyancy no longer lifts vapor off a hot surface, so liquid stops reaching it and the wall can overheat. In this mixture the alcohol evaporates first at the edge of each bubble, surface tension rises there, and the gradient pulls liquid back to the wall: the Marangoni effect. The measured heat flux barely moves between 0.01 g and 1 g. A law used to size a space evaporator has to carry that. And a genetic algorithm that reports a low error has not yet shown that its constants are the right ones.",
+    approach:
+      "The skeleton code did not run: one import hid the random() function, and two data values disagreed with the appendix. After fixing both, I fitted three laws. A power law in superheat and gravity. A five-constant law in which surface tension enters as extra gravity, g + n4·gen·γ, with pressure. And the inverse law for the superheat. For each one I varied the initial guesses, the mutation amplitude, the selection threshold, and the number of generations. Fifteen boiling points, and a random fifth of the 122 heat-pipe points, never entered a fit.",
+    outcome:
+      "The power law misses by 16.6% rms, above the ±10% noise: 19% high at 1 g, 16% low at 2 g. The five-constant law brings the miss to 12.3%, and 14.1% on the held-out points. The 1 g group and the 2 g group at 5.5 kPa still sit about 16% and 11% off, so part of the gravity effect is still missing. For γ = 1.79 the Marangoni term is worth 23.7 m/s², 2.4 g of extra gravity, which is why 0.01 g barely matters. Superheat dominates: a 1% error on it moves the heat flux by 3%, so a 15% budget needs it within about ±1.9 °C at 40 °C. The algorithm has limits too. Started at (1, 1, 1), no organism beats half the median error, nothing survives selection, and the population freezes; keeping the better half fixes it. For the heat pipe, an evaporator conductance anywhere from 5 to 11 W/°C fits equally well, with a mean error of 1.7%, and 2.1% on held-out points. Only the series conductance, 2.907 W/°C, is in the data. Separating the evaporator from the condenser needs a wall temperature.",
+    gallery: [
+      {
+        id: "mb0",
+        caption: "Gravity drops 100×, heat flux does not — the fitted law reads Marangoni flow as 2.4 g of extra gravity",
+        imageHref: "images/projects/microgravity-boiling/headline.svg",
+      },
+      {
+        id: "mb1",
+        caption: "Power law in g: the 1 g points sit 19% below it, the 2 g points 16% above. A missing term, not noise",
+        imageHref: "images/projects/microgravity-boiling/1.png",
+      },
+      {
+        id: "mb2",
+        caption: "Five constants: 12.3% on the 77 flight points, 14.1% on the 15 that never entered the fit",
+        imageHref: "images/projects/microgravity-boiling/2.png",
+      },
+      {
+        id: "mb3",
+        caption: "Without Marangoni (γ = 0), heat flux grows 4× from 1 to 20 m/s². At γ = 2 it grows 27%",
+        imageHref: "images/projects/microgravity-boiling/3.png",
+      },
+      {
+        id: "mb4",
+        caption: "The target error is a valley, not a point. From far guesses, ±8.5% mutations stall; ±40% reach the bottom",
+        imageHref: "images/projects/microgravity-boiling/4.png",
+      },
+      {
+        id: "mb5",
+        caption: "Started at (1, 1, 1), no organism survives selection and the population freezes. Keeping the better half unfreezes it",
+        imageHref: "images/projects/microgravity-boiling/5.png",
+      },
+      {
+        id: "mb6",
+        caption: "Heat pipe: (UA)e from 5 to 11 W/°C fits equally well. Only the series conductance, 2.907 W/°C, is in the data",
+        imageHref: "images/projects/microgravity-boiling/6.png",
+      },
+      {
+        id: "mb7",
+        caption: "A 1% error on superheat moves the heat flux 3%. Pressure comes next, at 0.54",
+        imageHref: "images/projects/microgravity-boiling/7.png",
+      },
+    ],
+  },
+  {
     slug: "shrouded-wind-turbine",
     title: "Shrouded wind turbine",
     subtitle: "A diffuser-augmented micro rotor, printed and measured in a wind tunnel",
